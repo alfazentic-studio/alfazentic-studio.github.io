@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zentic Studio · Diseño Web</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+            background: #0b0d15;
+            color: #e4e7f0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .card {
+            max-width: 720px;
+            width: 100%;
+            background: #141824;
+            padding: 3rem 2.5rem;
+            border-radius: 2rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+            border: 1px solid #2a2f42;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            border-color: #6c5ce7;
+            box-shadow: 0 0 40px rgba(108, 92, 231, 0.15);
+        }
+
+        /* Logo / Marca */
+        .badge {
+            display: inline-block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            background: #6c5ce7;
+            color: #fff;
+            padding: 0.4rem 1.2rem;
+            border-radius: 40px;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #a29bfe, #6c5ce7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+            letter-spacing: -1px;
+        }
+
+        .tagline {
+            font-size: 1.25rem;
+            color: #9aa0b8;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #252b3d;
+            padding-bottom: 2rem;
+        }
+
+        .tagline span {
+            color: #a29bfe;
+            font-weight: 500;
+        }
+
+        .status-box {
+            background: #1b212f;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid #6c5ce7;
+            text-align: left;
+        }
+
+        .status-box p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #c8cde0;
+        }
+
+        .status-box .emoji {
+            font-size: 1.4rem;
+            margin-right: 0.5rem;
+        }
+
+        .status-box strong {
+            color: #ffffff;
+        }
+
+        .grid-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .grid-item {
+            background: #0d111c;
+            padding: 1rem 0.5rem;
+            border-radius: 0.8rem;
+            border: 1px solid #252b3d;
+        }
+
+        .grid-item .numero {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #a29bfe;
+        }
+
+        .grid-item .label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #6b728e;
+            margin-top: 0.2rem;
+        }
+
+        .footer-note {
+            margin-top: 2.5rem;
+            font-size: 0.85rem;
+            color: #4a5070;
+            border-top: 1px solid #1f2538;
+            padding-top: 1.5rem;
+        }
+
+        .footer-note a {
+            color: #a29bfe;
+            text-decoration: none;
+        }
+
+        .footer-note a:hover {
+            text-decoration: underline;
+        }
+
+        /* Reloj en vivo */
+        #clock {
+            font-family: 'Courier New', monospace;
+            font-size: 1.1rem;
+            color: #6c7a9a;
+            margin-top: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 550px) {
+            .card {
+                padding: 2rem 1.2rem;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+            .grid-info {
+                grid-template-columns: 1fr;
+                gap: 0.6rem;
+            }
+            .grid-item {
+                padding: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+
+        <!-- Badge -->
+        <div class="badge">✦ En construcción</div>
+
+        <!-- Nombre de la marca -->
+        <h1>Zentic Studio</h1>
+        <p class="tagline">
+            Diseño web <span>·</span> Experiencia digital <span>·</span> Marca
+        </p>
+
+        <!-- Mensaje de estado -->
+        <div class="status-box">
+            <p>
+                <span class="emoji">🚀</span>
+                <strong>¡Página de prueba activa!</strong><br />
+                Este es el escaparate digital de <strong>Zentic Studio</strong>.
+                Próximamente, un portafolio completo con nuestros mejores proyectos
+                de diseño web y experiencia de usuario.
+            </p>
+        </div>
+
+        <!-- Estadísticas rápidas (ejemplo) -->
+        <div class="grid-info">
+            <div class="grid-item">
+                <div class="numero">+10</div>
+                <div class="label">Proyectos</div>
+            </div>
+            <div class="grid-item">
+                <div class="numero">100%</div>
+                <div class="label">Satisfacción</div>
+            </div>
+            <div class="grid-item">
+                <div class="numero">24/7</div>
+                <div class="label">Soporte</div>
+            </div>
+        </div>
+
+        <!-- Reloj interactivo (JavaScript) -->
+        <div id="clock">Cargando hora...</div>
+
+        <!-- Footer -->
+        <div class="footer-note">
+            &copy; 2026 <a href="https://zentic-studio.github.io" target="_blank">Zentic Studio</a> · Hecho con ❤️ y ☕
+        </div>
+
+    </div>
+
+    <script>
+        // Reloj en tiempo real
+        function updateClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            document.getElementById('clock').textContent = `🕒 ${hours}:${minutes}:${seconds} (hora local)`;
+        }
+        updateClock();
+        setInterval(updateClock, 1000);
+    </script>
+
+</body>
+</html>
