@@ -55,12 +55,8 @@
             -moz-osx-font-smoothing: grayscale;
             min-height: 100vh;
         }
-        .text-purple {
-            color: var(--purple);
-        }
-        .text-purple-light {
-            color: var(--purple-light);
-        }
+        .text-purple { color: var(--purple); }
+        .text-purple-light { color: var(--purple-light); }
         .section-label {
             display: inline-flex;
             align-items: center;
@@ -85,13 +81,8 @@
             animation: pulse-dot 2s ease-in-out infinite;
         }
         @keyframes pulse-dot {
-            0%,
-            100% {
-                box-shadow: 0 0 0 0 rgba(124, 58, 237, 0.7);
-            }
-            50% {
-                box-shadow: 0 0 0 12px rgba(124, 58, 237, 0);
-            }
+            0%, 100% { box-shadow: 0 0 0 0 rgba(124, 58, 237, 0.7); }
+            50% { box-shadow: 0 0 0 12px rgba(124, 58, 237, 0); }
         }
         .section-title {
             font-weight: 800;
@@ -232,9 +223,7 @@
             color: var(--purple-light);
             font-weight: 600;
         }
-        .navbar-cta {
-            margin-left: 12px;
-        }
+        .navbar-cta { margin-left: 12px; }
         .navbar-cta .btn-primary-glow {
             padding: 10px 22px;
             font-size: 0.9rem;
@@ -254,9 +243,7 @@
             border-radius: 50%;
             transition: var(--transition-fast);
         }
-        .hamburger-btn:hover {
-            background: rgba(255, 255, 255, 0.05);
-        }
+        .hamburger-btn:hover { background: rgba(255, 255, 255, 0.05); }
         .hamburger-line {
             display: block;
             width: 24px;
@@ -266,15 +253,9 @@
             transition: var(--transition-smooth);
             position: absolute;
         }
-        .hamburger-line:nth-child(1) {
-            top: 14px;
-        }
-        .hamburger-line:nth-child(2) {
-            top: 21px;
-        }
-        .hamburger-line:nth-child(3) {
-            top: 28px;
-        }
+        .hamburger-line:nth-child(1) { top: 14px; }
+        .hamburger-line:nth-child(2) { top: 21px; }
+        .hamburger-line:nth-child(3) { top: 28px; }
         .hamburger-btn.open .hamburger-line:nth-child(1) {
             top: 21px;
             transform: rotate(45deg);
@@ -321,9 +302,7 @@
             box-shadow: -10px 0 40px rgba(0, 0, 0, 0.5);
             overflow-y: auto;
         }
-        .mobile-menu.open {
-            right: 0;
-        }
+        .mobile-menu.open { right: 0; }
         .mobile-menu a {
             display: block;
             color: #e2e8f0;
@@ -344,9 +323,7 @@
             color: var(--purple-light);
             font-weight: 700;
         }
-        .mobile-menu .mobile-cta {
-            margin-top: 20px;
-        }
+        .mobile-menu .mobile-cta { margin-top: 20px; }
         .mobile-menu .mobile-cta .btn-primary-glow {
             width: 100%;
             justify-content: center;
@@ -425,10 +402,7 @@
             color: #fff;
             box-shadow: 0 8px 25px rgba(124, 58, 237, 0.4);
         }
-        .service-detail-card h4 {
-            font-weight: 700;
-            font-size: 1.15rem;
-        }
+        .service-detail-card h4 { font-weight: 700; font-size: 1.15rem; }
         .service-detail-card p {
             color: #94a3b8;
             font-size: 0.9rem;
@@ -610,65 +584,12 @@
             margin: 0 auto;
             padding: 0 24px;
         }
-        .payment-methods-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-            justify-content: center;
-            margin-top: 30px;
-        }
-        .payment-badge {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            background: var(--bg-surface);
-            border: 1px solid var(--border-subtle);
-            border-radius: 50px;
-            padding: 12px 24px;
-            color: #e2e8f0;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: var(--transition-smooth);
-            cursor: default;
-        }
-        .payment-badge:hover {
-            border-color: rgba(124, 58, 237, 0.4);
-            box-shadow: 0 8px 25px rgba(124, 58, 237, 0.15);
-            transform: translateY(-3px);
-        }
-        .payment-badge .pay-icon {
-            font-size: 1.4rem;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-        .pay-tropipay {
-            background: #f97316;
-            color: #fff;
-        }
-        .pay-qvapay {
-            background: #6366f1;
-            color: #fff;
-        }
-        .pay-visa {
-            background: #1a1f71;
-            color: #fff;
-        }
-        .pay-bitcoin {
-            background: #f7931a;
-            color: #fff;
-        }
-        .pay-monero {
-            background: #ff6600;
-            color: #fff;
-        }
-        .pay-unionpay {
-            background: #d50032;
-            color: #fff;
+        .payment-platforms-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 36px;
+            align-items: start;
         }
         .footer-section {
             background: #05070d;
@@ -703,54 +624,22 @@
             transition: var(--transition-fast);
             margin-left: 20px;
         }
-        .footer-links a:hover {
-            color: var(--purple-light);
-        }
-        .footer-copy {
-            color: #64748b;
-            font-size: 0.8rem;
-        }
+        .footer-links a:hover { color: var(--purple-light); }
+        .footer-copy { color: #64748b; font-size: 0.8rem; }
         @media (max-width: 992px) {
-            .navbar-links {
-                display: none;
-            }
-            .navbar-cta {
-                display: none;
-            }
-            .hamburger-btn {
-                display: flex;
-            }
-            .pricing-card.featured {
-                transform: scale(1);
-            }
-            .pricing-card.featured:hover {
-                transform: translateY(-10px);
-            }
-            .section-title {
-                font-size: 2rem;
-            }
+            .navbar-links { display: none; }
+            .navbar-cta { display: none; }
+            .hamburger-btn { display: flex; }
+            .pricing-card.featured { transform: scale(1); }
+            .pricing-card.featured:hover { transform: translateY(-10px); }
+            .section-title { font-size: 2rem; }
+            .payment-platforms-grid { grid-template-columns: 1fr; }
         }
         @media (max-width: 600px) {
-            .pricing-grid {
-                grid-template-columns: 1fr;
-            }
-            .services-detail-grid {
-                grid-template-columns: 1fr;
-            }
-            .payment-methods-grid {
-                gap: 10px;
-            }
-            .payment-badge {
-                padding: 10px 16px;
-                font-size: 0.8rem;
-            }
-            .footer-grid {
-                flex-direction: column;
-                text-align: center;
-            }
-            .footer-links a {
-                margin: 0 10px;
-            }
+            .pricing-grid { grid-template-columns: 1fr; }
+            .services-detail-grid { grid-template-columns: 1fr; }
+            .footer-grid { flex-direction: column; text-align: center; }
+            .footer-links a { margin: 0 10px; }
         }
     </style>
 </head>
@@ -910,19 +799,37 @@
         <div class="container">
             <div style="text-align:center;">
                 <span class="section-label">Métodos de pago</span>
-                <h2 class="section-title">Aceptamos <span class="text-purple">múltiples</span> formas de pago</h2>
-                <p class="section-subtitle" style="margin:0 auto;">Facilitamos tus transacciones con diversas plataformas y métodos. Todos los pagos se realizan por hitos, brindándote seguridad y transparencia en cada etapa del proyecto.</p>
+                <h2 class="section-title">Flexibilidad <span class="text-purple">total</span> en pagos</h2>
+                <p class="section-subtitle" style="margin:0 auto;">Gracias a nuestras plataformas aliadas, tienes docenas de formas de pagar con seguridad. Elige la que más te convenga. Todos los pagos son por hitos.</p>
             </div>
-            <div class="payment-methods-grid">
-                <div class="payment-badge"><span class="pay-icon pay-tropipay"><i class="bi bi-wallet2"></i></span> TropiPay</div>
-                <div class="payment-badge"><span class="pay-icon pay-qvapay"><i class="bi bi-credit-card"></i></span> QvaPay</div>
-                <div class="payment-badge"><span class="pay-icon pay-visa"><i class="bi bi-credit-card-2-front"></i></span> VISA</div>
-                <div class="payment-badge"><span class="pay-icon pay-bitcoin"><i class="bi bi-currency-bitcoin"></i></span> Bitcoin (BTC)</div>
-                <div class="payment-badge"><span class="pay-icon pay-monero"><i class="bi bi-shield-lock"></i></span> Monero (XMR)</div>
-                <div class="payment-badge"><span class="pay-icon pay-unionpay"><i class="bi bi-building"></i></span> UnionPay</div>
+            <div class="payment-platforms-grid">
+                <div style="background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:var(--radius-xl); padding:28px;">
+                    <h4 style="font-weight:700; color:#f97316; display:flex; align-items:center; gap:8px; margin-bottom:14px;"><span style="display:inline-flex; width:36px; height:36px; border-radius:50%; background:#f97316; color:#fff; align-items:center; justify-content:center; font-weight:800;">T</span> TropiPay</h4>
+                    <p style="color:#cbd5e1; font-size:0.9rem; margin-bottom:12px;">Acepta múltiples métodos a través de TropiPay:</p>
+                    <ul style="list-style:none; display:flex; flex-wrap:wrap; gap:8px; padding:0;">
+                        <li style="background:rgba(255,255,255,0.05); padding:6px 14px; border-radius:50px; font-size:0.8rem; color:#e2e8f0;"><i class="bi bi-credit-card text-purple-light me-1"></i> Visa, Mastercard, Amex, Discover, UnionPay</li>
+                        <li style="background:rgba(255,255,255,0.05); padding:6px 14px; border-radius:50px; font-size:0.8rem; color:#e2e8f0;"><i class="bi bi-phone text-purple-light me-1"></i> Apple Pay, Google Pay</li>
+                        <li style="background:rgba(255,255,255,0.05); padding:6px 14px; border-radius:50px; font-size:0.8rem; color:#e2e8f0;"><i class="bi bi-currency-bitcoin text-purple-light me-1"></i> USDC, USDT</li>
+                        <li style="background:rgba(255,255,255,0.05); padding:6px 14px; border-radius:50px; font-size:0.8rem; color:#e2e8f0;"><i class="bi bi-wallet2 text-purple-light me-1"></i> PayPal, Zelle, Binance Pay, AirTM</li>
+                        <li style="background:rgba(255,255,255,0.05); padding:6px 14px; border-radius:50px; font-size:0.8rem; color:#e2e8f0;"><i class="bi bi-qr-code text-purple-light me-1"></i> Pagos QR, Saldo TropiPay</li>
+                        <li style="background:rgba(255,255,255,0.05); padding:6px 14px; border-radius:50px; font-size:0.8rem; color:#e2e8f0;"><i class="bi bi-bank text-purple-light me-1"></i> Transferencias bancarias, depósitos en efectivo</li>
+                    </ul>
+                </div>
+                <div style="background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:var(--radius-xl); padding:28px;">
+                    <h4 style="font-weight:700; color:#6366f1; display:flex; align-items:center; gap:8px; margin-bottom:14px;"><span style="display:inline-flex; width:36px; height:36px; border-radius:50%; background:#6366f1; color:#fff; align-items:center; justify-content:center; font-weight:800;">Q</span> QvaPay</h4>
+                    <p style="color:#cbd5e1; font-size:0.9rem; margin-bottom:12px;">Más de 40 métodos disponibles a través de QvaPay, incluyendo:</p>
+                    <ul style="list-style:none; display:flex; flex-wrap:wrap; gap:8px; padding:0;">
+                        <li style="background:rgba(255,255,255,0.05); padding:6px 14px; border-radius:50px; font-size:0.8rem; color:#e2e8f0;"><i class="bi bi-currency-bitcoin text-purple-light me-1"></i> Bitcoin (BTC), USDC y otras cripto</li>
+                        <li style="background:rgba(255,255,255,0.05); padding:6px 14px; border-radius:50px; font-size:0.8rem; color:#e2e8f0;"><i class="bi bi-cash-stack text-purple-light me-1"></i> USD, EUR, CUP</li>
+                        <li style="background:rgba(255,255,255,0.05); padding:6px 14px; border-radius:50px; font-size:0.8rem; color:#e2e8f0;"><i class="bi bi-paypal text-purple-light me-1"></i> PayPal</li>
+                        <li style="background:rgba(255,255,255,0.05); padding:6px 14px; border-radius:50px; font-size:0.8rem; color:#e2e8f0;"><i class="bi bi-bank2 text-purple-light me-1"></i> Transferencias bancarias, depósitos en efectivo</li>
+                        <li style="background:rgba(255,255,255,0.05); padding:6px 14px; border-radius:50px; font-size:0.8rem; color:#e2e8f0;"><i class="bi bi-gift text-purple-light me-1"></i> Tarjetas de regalo</li>
+                        <li style="background:rgba(255,255,255,0.05); padding:6px 14px; border-radius:50px; font-size:0.8rem; color:#e2e8f0;"><i class="bi bi-coin text-purple-light me-1"></i> USD Cash, CLASICA y otras monedas internas</li>
+                    </ul>
+                </div>
             </div>
-            <div style="text-align:center;margin-top:24px;color:#94a3b8;font-size:0.9rem;">
-                <i class="bi bi-shield-check text-emerald" style="font-size:1.1rem;"></i> También aceptamos tarjetas soportadas por TropiPay y QvaPay. Todas las transacciones son seguras.
+            <div style="text-align:center; margin-top:24px; color:#94a3b8; font-size:0.9rem;">
+                <i class="bi bi-shield-check" style="color:#10b981; font-size:1.1rem;"></i> También aceptamos tarjetas soportadas por TropiPay y QvaPay. Todas las transacciones son seguras y los pagos se realizan por hitos.
             </div>
         </div>
     </section>
@@ -945,37 +852,19 @@
             const mobileMenu = document.getElementById('mobileMenu');
             const mobileOverlay = document.getElementById('mobileOverlay');
             const body = document.body;
-
-            function openMenu() {
-                hamburgerBtn.classList.add('open');
-                mobileMenu.classList.add('open');
-                mobileOverlay.classList.add('open');
-                body.style.overflow = 'hidden';
-            }
-
-            function closeMenu() {
-                hamburgerBtn.classList.remove('open');
-                mobileMenu.classList.remove('open');
-                mobileOverlay.classList.remove('open');
-                body.style.overflow = '';
-            }
-
+            function openMenu() { hamburgerBtn.classList.add('open'); mobileMenu.classList.add('open'); mobileOverlay.classList.add('open'); body.style.overflow = 'hidden'; }
+            function closeMenu() { hamburgerBtn.classList.remove('open'); mobileMenu.classList.remove('open'); mobileOverlay.classList.remove('open'); body.style.overflow = ''; }
             function toggleMenu() { if (mobileMenu.classList.contains('open')) { closeMenu(); } else { openMenu(); } }
             hamburgerBtn.addEventListener('click', toggleMenu);
             mobileOverlay.addEventListener('click', closeMenu);
-            document.querySelectorAll('#mobileMenu a').forEach(function(link) { link.addEventListener('click', function() {
-                    setTimeout(closeMenu, 150); }); });
+            document.querySelectorAll('#mobileMenu a').forEach(function(link) { link.addEventListener('click', function() { setTimeout(closeMenu, 150); }); });
             let touchStartX = 0;
             mobileMenu.addEventListener('touchstart', function(e) { touchStartX = e.touches[0].clientX; }, { passive: true });
-            mobileMenu.addEventListener('touchend', function(e) { const touchEndX = e.changedTouches[0].clientX; if (
-                    touchEndX - touchStartX > 60) { closeMenu(); } });
+            mobileMenu.addEventListener('touchend', function(e) { const touchEndX = e.changedTouches[0].clientX; if (touchEndX - touchStartX > 60) { closeMenu(); } });
             document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeMenu(); });
             const navbar = document.getElementById('navbar');
             let lastScrollY = 0;
-            window.addEventListener('scroll', function() { const scrollY = window.scrollY; if (scrollY > 100 && scrollY >
-                    lastScrollY) { navbar.style.transform = 'translateY(-100%)'; } else { navbar.style.transform =
-                        'translateY(0)'; }
-                lastScrollY = scrollY; }, { passive: true });
+            window.addEventListener('scroll', function() { const scrollY = window.scrollY; if (scrollY > 100 && scrollY > lastScrollY) { navbar.style.transform = 'translateY(-100%)'; } else { navbar.style.transform = 'translateY(0)'; } lastScrollY = scrollY; }, { passive: true });
         })();
     </script>
 </body>
