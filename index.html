@@ -1,242 +1,274 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="google-site-verification" content="SmvPE2sz2esST3YEKcgqV13GZsObL-VS22mxh7yBmAs" />
-    <title>Zentic Studio · Diseño Web</title>
-    <style>
-        /* Reset básico */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
-            background: #0b0d15;
-            color: #e4e7f0;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
-        }
-
-        .card {
-            max-width: 720px;
-            width: 100%;
-            background: #141824;
-            padding: 3rem 2.5rem;
-            border-radius: 2rem;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
-            border: 1px solid #2a2f42;
-            text-align: center;
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            border-color: #6c5ce7;
-            box-shadow: 0 0 40px rgba(108, 92, 231, 0.15);
-        }
-
-        /* Logo / Marca */
-        .badge {
-            display: inline-block;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            background: #6c5ce7;
-            color: #fff;
-            padding: 0.4rem 1.2rem;
-            border-radius: 40px;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-        }
-
-        h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #a29bfe, #6c5ce7);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 0.5rem;
-            letter-spacing: -1px;
-        }
-
-        .tagline {
-            font-size: 1.25rem;
-            color: #9aa0b8;
-            font-weight: 300;
-            margin-bottom: 2rem;
-            border-bottom: 1px solid #252b3d;
-            padding-bottom: 2rem;
-        }
-
-        .tagline span {
-            color: #a29bfe;
-            font-weight: 500;
-        }
-
-        .status-box {
-            background: #1b212f;
-            border-radius: 1rem;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-            border-left: 4px solid #6c5ce7;
-            text-align: left;
-        }
-
-        .status-box p {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: #c8cde0;
-        }
-
-        .status-box .emoji {
-            font-size: 1.4rem;
-            margin-right: 0.5rem;
-        }
-
-        .status-box strong {
-            color: #ffffff;
-        }
-
-        .grid-info {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-
-        .grid-item {
-            background: #0d111c;
-            padding: 1rem 0.5rem;
-            border-radius: 0.8rem;
-            border: 1px solid #252b3d;
-        }
-
-        .grid-item .numero {
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: #a29bfe;
-        }
-
-        .grid-item .label {
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #6b728e;
-            margin-top: 0.2rem;
-        }
-
-        .footer-note {
-            margin-top: 2.5rem;
-            font-size: 0.85rem;
-            color: #4a5070;
-            border-top: 1px solid #1f2538;
-            padding-top: 1.5rem;
-        }
-
-        .footer-note a {
-            color: #a29bfe;
-            text-decoration: none;
-        }
-
-        .footer-note a:hover {
-            text-decoration: underline;
-        }
-
-        /* Reloj en vivo */
-        #clock {
-            font-family: 'Courier New', monospace;
-            font-size: 1.1rem;
-            color: #6c7a9a;
-            margin-top: 0.5rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 550px) {
-            .card {
-                padding: 2rem 1.2rem;
-            }
-            h1 {
-                font-size: 2.5rem;
-            }
-            .grid-info {
-                grid-template-columns: 1fr;
-                gap: 0.6rem;
-            }
-            .grid-item {
-                padding: 0.8rem;
-            }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JervDev | Inicio</title>
+  <!-- Bootstrap 5.3.8 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <style>
+    /* Estilos globales (comunes a todas las páginas) */
+    * { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+    .text-purple { color: #7c3aed; }
+    .bg-purple { background-color: #7c3aed; }
+    .btn-purple {
+      background-color: #7c3aed; border-color: #7c3aed; color: #fff;
+      font-weight: 600; padding: 10px 28px; transition: all 0.3s ease;
+    }
+    .btn-purple:hover {
+      background-color: #5b21b6; border-color: #5b21b6;
+      transform: translateY(-3px); box-shadow: 0 10px 25px -5px rgba(124,58,237,0.5);
+      color: #fff;
+    }
+    .btn-outline-purple {
+      border-color: #7c3aed; color: #7c3aed; font-weight: 600;
+      padding: 10px 28px; transition: all 0.3s ease;
+    }
+    .btn-outline-purple:hover {
+      background-color: #7c3aed; color: #fff; transform: translateY(-3px);
+    }
+    .section-title { font-weight: 800; font-size: 2.8rem; }
+    .section-subtitle {
+      color: #7c3aed; font-weight: 600; letter-spacing: 2px;
+      text-transform: uppercase; font-size: 0.9rem;
+    }
+    /* Navbar personalizado */
+    .navbar-dark.bg-dark-custom {
+      background: rgba(13, 11, 26, 0.9) !important;
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .navbar-dark .navbar-nav .nav-link.active {
+      color: #7c3aed !important;
+      font-weight: 600;
+    }
+    /* Hero (corregido para que la etiqueta se vea siempre) */
+    .hero-section {
+      background: linear-gradient(135deg, #0d0b1a 0%, #1a1a3a 50%, #2d1b4e 100%);
+      color: white;
+      padding: 6rem 0 4rem 0; /* menos altura que antes */
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-section::before {
+      content: ''; position: absolute; top: -100px; right: -100px;
+      width: 400px; height: 400px; background: rgba(120,80,255,0.12);
+      border-radius: 50%; pointer-events: none;
+    }
+    .hero-section::after {
+      content: ''; position: absolute; bottom: -120px; left: -120px;
+      width: 500px; height: 500px; background: rgba(255,100,200,0.06);
+      border-radius: 50%; pointer-events: none;
+    }
+    .hero-content { position: relative; z-index: 2; }
+    /* Tarjetas de servicios (usadas en inicio y servicios) */
+    .service-card {
+      background: white; padding: 2rem 1.5rem; border-radius: 20px;
+      box-shadow: 0 20px 40px -15px rgba(0,0,0,0.08);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      height: 100%; border: 1px solid rgba(0,0,0,0.02);
+    }
+    .service-card:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 30px 60px -15px rgba(124,58,237,0.25);
+      border-color: #7c3aed;
+    }
+    .service-card .icon-circle {
+      width: 70px; height: 70px; background: #f3f0ff; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1.5rem auto; color: #7c3aed; font-size: 2rem;
+      transition: 0.3s ease;
+    }
+    .service-card:hover .icon-circle { background: #7c3aed; color: white; }
+    /* Footer */
+    .footer-dark {
+      background: #05040b; color: #a0a0b0;
+    }
+    .footer-dark a {
+      color: #a0a0b0; text-decoration: none; transition: 0.2s ease;
+    }
+    .footer-dark a:hover { color: #7c3aed; }
+    .social-icon {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 40px; height: 40px; border-radius: 50%;
+      background: rgba(255,255,255,0.05); color: white !important;
+      transition: 0.3s ease; font-size: 1.2rem;
+    }
+    .social-icon:hover { background: #7c3aed; transform: translateY(-5px); }
+    /* Corregir la etiqueta de "Freelancer desde Cuba" */
+    .badge-hero {
+      background: rgba(124, 58, 237, 0.2);
+      border: 1px solid rgba(124, 58, 237, 0.3);
+      color: #7c3aed;
+      font-weight: 600;
+      padding: 0.5rem 1.5rem;
+      border-radius: 50px;
+      display: inline-block;
+      margin-bottom: 1.5rem;
+    }
+    .badge-hero i { margin-right: 0.5rem; }
+  </style>
 </head>
 <body>
 
-    <div class="card">
-
-        <!-- Badge -->
-        <div class="badge">✦ En construcción</div>
-
-        <!-- Nombre de la marca -->
-        <h1>Zentic Studio</h1>
-        <p class="tagline">
-            Diseño web <span>·</span> Experiencia digital <span>·</span> Marca
-        </p>
-
-        <!-- Mensaje de estado -->
-        <div class="status-box">
-            <p>
-                <span class="emoji">🚀</span>
-                <strong>¡Página de prueba activa!</strong><br />
-                Este es el escaparate digital de <strong>Zentic Studio</strong>.
-                Próximamente, un portafolio completo con nuestros mejores proyectos
-                de diseño web y experiencia de usuario.
-            </p>
-        </div>
-
-        <!-- Estadísticas rápidas (ejemplo) -->
-        <div class="grid-info">
-            <div class="grid-item">
-                <div class="numero">+10</div>
-                <div class="label">Proyectos</div>
-            </div>
-            <div class="grid-item">
-                <div class="numero">100%</div>
-                <div class="label">Satisfacción</div>
-            </div>
-            <div class="grid-item">
-                <div class="numero">24/7</div>
-                <div class="label">Soporte</div>
-            </div>
-        </div>
-
-        <!-- Reloj interactivo (JavaScript) -->
-        <div id="clock">Cargando hora...</div>
-
-        <!-- Footer -->
-        <div class="footer-note">
-            &copy; 2026 <a href="https://zentic-studio.github.io" target="_blank">Zentic Studio</a> · Hecho con ❤️ y ☕
-        </div>
-
+<!-- ===== NAVBAR (común a todas las páginas) ===== -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark-custom fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-3" href="index.html">
+      <i class="bi bi-brush-fill text-purple me-2"></i>Jerv<span class="text-purple">Dev</span>
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+        <li class="nav-item"><a class="nav-link" href="portafolio.html">Portafolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="testimonios.html">Testimonios</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        <li class="nav-item ms-lg-3">
+          <a href="contacto.html" class="btn btn-purple btn-sm px-4">Empezar proyecto</a>
+        </li>
+      </ul>
     </div>
+  </div>
+</nav>
 
-    <script>
-        // Reloj en tiempo real
-        function updateClock() {
-            const now = new Date();
-            const hours = String(now.getHours()).padStart(2, '0');
-            const minutes = String(now.getMinutes()).padStart(2, '0');
-            const seconds = String(now.getSeconds()).padStart(2, '0');
-            document.getElementById('clock').textContent = `🕒 ${hours}:${minutes}:${seconds} (hora local)`;
-        }
-        updateClock();
-        setInterval(updateClock, 1000);
-    </script>
+<!-- ===== HERO ===== -->
+<section class="hero-section">
+  <div class="container hero-content">
+    <div class="row align-items-center">
+      <div class="col-lg-7">
+        <!-- Etiqueta ahora siempre visible -->
+        <div class="badge-hero">
+          <i class="bi bi-rocket-takeoff"></i> Freelancer desde Cuba
+        </div>
+        <h1 class="display-1 fw-bold mb-4" style="line-height: 1.1;">
+          Transformo tu <br>idea en <span class="text-purple">experiencia</span> <br>digital
+        </h1>
+        <p class="lead mb-5" style="color: #c4bcdb; max-width: 550px;">
+          Creo sitios web a medida, rápidos y cautivadores que conectan con tu audiencia y convierten visitas en clientes.
+        </p>
+        <div class="d-flex flex-wrap gap-3">
+          <a href="contacto.html" class="btn btn-purple btn-lg">Solicitar presupuesto <i class="bi bi-arrow-right ms-2"></i></a>
+          <a href="portafolio.html" class="btn btn-outline-purple btn-lg">Ver mi trabajo</a>
+        </div>
+        <div class="d-flex mt-5 gap-4">
+          <div><span class="fw-bold fs-3 text-white">+30</span> <span class="d-block text-light-emphasis" style="font-size: 0.9rem;">Proyectos entregados</span></div>
+          <div><span class="fw-bold fs-3 text-white">100%</span> <span class="d-block text-light-emphasis" style="font-size: 0.9rem;">Satisfacción cliente</span></div>
+        </div>
+      </div>
+      <div class="col-lg-5 d-none d-lg-block text-center">
+        <div class="position-relative">
+          <div class="bg-purple rounded-circle p-5 mx-auto" style="width: 320px; height: 320px; background: radial-gradient(circle at 30% 30%, #7c3aed, #4c1d95); box-shadow: 0 50px 100px -20px rgba(124, 58, 237, 0.4);">
+            <i class="bi bi-laptop display-1 text-white"></i>
+            <div class="mt-3"><i class="bi bi-code-slash fs-1 text-white opacity-50 mx-2"></i><i class="bi bi-palette fs-1 text-white opacity-50 mx-2"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- ===== BREVE INTRO DE SERVICIOS (vista previa) ===== -->
+<section class="py-5" style="background-color: #f8fafc;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-subtitle">Lo que hago</span>
+      <h2 class="section-title">Servicios de <span class="text-purple">diseño</span> web</h2>
+      <p class="text-secondary mx-auto" style="max-width: 600px;">Soluciones digitales completas para llevar tu marca al siguiente nivel.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="service-card text-center">
+          <div class="icon-circle"><i class="bi bi-pencil-square"></i></div>
+          <h5 class="fw-bold">Diseño UI/UX</h5>
+          <p class="text-secondary small">Interfaces intuitivas y atractivas centradas en la experiencia del usuario.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="service-card text-center">
+          <div class="icon-circle"><i class="bi bi-code-square"></i></div>
+          <h5 class="fw-bold">Desarrollo Web</h5>
+          <p class="text-secondary small">Sitios rápidos, seguros y escalables con las últimas tecnologías.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="service-card text-center">
+          <div class="icon-circle"><i class="bi bi-graph-up-arrow"></i></div>
+          <h5 class="fw-bold">SEO & Marketing</h5>
+          <p class="text-secondary small">Posicionamiento en buscadores y estrategias de contenido.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="service-card text-center">
+          <div class="icon-circle"><i class="bi bi-server"></i></div>
+          <h5 class="fw-bold">Mantenimiento</h5>
+          <p class="text-secondary small">Soporte continuo, actualizaciones y optimización de rendimiento.</p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <a href="servicios.html" class="btn btn-outline-purple">Ver todos los servicios <i class="bi bi-arrow-right ms-2"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SOBRE MÍ (resumen) ===== -->
+<section class="py-5">
+  <div class="container py-3">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <span class="section-subtitle">Sobre mí</span>
+        <h2 class="section-title mb-4">Diseño el futuro <span class="text-purple">digital</span> de tu marca</h2>
+        <p class="lead fs-6 text-secondary">Soy un profesional apasionado por el diseño y el desarrollo web desde Las Tunas, Cuba. No solo construyo páginas web, creo ecosistemas digitales que cuentan tu historia y conectan emocionalmente con tus usuarios.</p>
+        <div class="d-flex mt-4 gap-4 flex-wrap">
+          <div><i class="bi bi-check-circle-fill text-purple me-2"></i> Diseño 100% personalizado</div>
+          <div><i class="bi bi-check-circle-fill text-purple me-2"></i> Código limpio y optimizado</div>
+          <div><i class="bi bi-check-circle-fill text-purple me-2"></i> Soporte post-lanzamiento</div>
+        </div>
+        <a href="contacto.html" class="btn btn-purple mt-4">Hablemos</a>
+      </div>
+      <div class="col-lg-6">
+        <div class="row g-3">
+          <div class="col-6"><img src="https://picsum.photos/400/300?random=1" class="img-fluid rounded-4 shadow" alt="Diseño web"></div>
+          <div class="col-6"><img src="https://picsum.photos/400/300?random=2" class="img-fluid rounded-4 shadow mt-4" alt="Desarrollo"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER (común) ===== -->
+<footer class="footer-dark py-4">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-4 text-center text-md-start">
+        <a class="navbar-brand fw-bold fs-4" href="index.html">
+          <i class="bi bi-brush-fill text-purple me-2"></i>Jerv<span class="text-purple">Dev</span>
+        </a>
+        <p class="small mb-0 mt-1">Transformando ideas en experiencias digitales desde Cuba.</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <span class="small">© 2026 JervDev. Todos los derechos reservados.</span>
+      </div>
+      <div class="col-md-4 text-center text-md-end">
+        <a href="#" class="text-decoration-none me-3 small">Política de privacidad</a>
+        <a href="#" class="text-decoration-none small">Términos de uso</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS (necesario para el toggler del navbar) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
