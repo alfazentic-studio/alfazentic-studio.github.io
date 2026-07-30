@@ -257,18 +257,9 @@
         .hamburger-line:nth-child(1) { top: 14px; }
         .hamburger-line:nth-child(2) { top: 21px; }
         .hamburger-line:nth-child(3) { top: 28px; }
-        .hamburger-btn.open .hamburger-line:nth-child(1) {
-            top: 21px;
-            transform: rotate(45deg);
-        }
-        .hamburger-btn.open .hamburger-line:nth-child(2) {
-            opacity: 0;
-            transform: scaleX(0);
-        }
-        .hamburger-btn.open .hamburger-line:nth-child(3) {
-            top: 21px;
-            transform: rotate(-45deg);
-        }
+        .hamburger-btn.open .hamburger-line:nth-child(1) { top: 21px; transform: rotate(45deg); }
+        .hamburger-btn.open .hamburger-line:nth-child(2) { opacity: 0; transform: scaleX(0); }
+        .hamburger-btn.open .hamburger-line:nth-child(3) { top: 21px; transform: rotate(-45deg); }
         .mobile-menu-overlay {
             position: fixed;
             inset: 0;
@@ -280,10 +271,7 @@
             backdrop-filter: blur(4px);
             -webkit-backdrop-filter: blur(4px);
         }
-        .mobile-menu-overlay.open {
-            opacity: 1;
-            pointer-events: all;
-        }
+        .mobile-menu-overlay.open { opacity: 1; pointer-events: all; }
         .mobile-menu {
             position: fixed;
             top: 0;
@@ -487,7 +475,10 @@
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-18px); }
         }
-        .hero-card-icon { font-size: 3rem; color: var(--purple-light); }
+        .hero-card-icon {
+            font-size: 3rem;
+            color: var(--purple-light);
+        }
         .services-preview {
             padding: 80px 0;
             background: var(--bg-deep);
@@ -621,7 +612,10 @@
             color: #cbd5e1;
             font-size: 0.95rem;
         }
-        .about-text .check-list li i { color: var(--purple); font-size: 1.2rem; }
+        .about-text .check-list li i {
+            color: var(--purple);
+            font-size: 1.2rem;
+        }
         .footer-section {
             background: #05070d;
             border-top: 1px solid rgba(255, 255, 255, 0.04);
@@ -657,29 +651,27 @@
         }
         .footer-links a:hover { color: var(--purple-light); }
         .footer-copy { color: #64748b; font-size: 0.8rem; }
-
+        /* Overlay de verificación */
         #turnstile-overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;
-            background: rgba(8, 11, 20, 0.92);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            background: rgba(0, 0, 0, 0.9);
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             z-index: 9999;
-            color: #f1f5f9;
+            color: white;
             font-family: 'Inter', sans-serif;
+            text-align: center;
         }
         #turnstile-overlay h2 {
             font-size: 28px;
             margin-bottom: 20px;
             font-weight: 600;
-            letter-spacing: -0.02em;
         }
         #turnstile-overlay p {
             margin-top: 20px;
@@ -714,12 +706,14 @@
     </style>
 </head>
 <body>
+    <!-- Overlay de verificación Turnstile -->
     <div id="turnstile-overlay">
         <h2>🔐 Verifica que eres humano</h2>
         <div id="turnstile-widget"></div>
         <p>Esto ayuda a proteger nuestra web de bots</p>
     </div>
 
+    <!-- Contenido principal (oculto hasta verificar) -->
     <div id="main-content" style="display: none;">
         <nav class="navbar" id="navbar">
             <div class="container">
@@ -793,9 +787,15 @@
                     </div>
                     <div class="hero-visual">
                         <div class="hero-card-stack">
-                            <div class="hero-floating-card card-main"><i class="bi bi-laptop hero-card-icon"></i></div>
-                            <div class="hero-floating-card card-secondary"><i class="bi bi-code-slash hero-card-icon" style="font-size:2.2rem;"></i></div>
-                            <div class="hero-floating-card card-tertiary"><i class="bi bi-palette hero-card-icon" style="font-size:2rem;"></i></div>
+                            <div class="hero-floating-card card-main">
+                                <i class="bi bi-laptop hero-card-icon"></i>
+                            </div>
+                            <div class="hero-floating-card card-secondary">
+                                <i class="bi bi-code-slash hero-card-icon" style="font-size:2.2rem;"></i>
+                            </div>
+                            <div class="hero-floating-card card-tertiary">
+                                <i class="bi bi-palette hero-card-icon" style="font-size:2rem;"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -874,6 +874,7 @@
 
     <script>
         (function() {
+            // Verificación Turnstile
             if (sessionStorage.getItem('turnstile_verified') === 'true') {
                 document.getElementById('turnstile-overlay').style.display = 'none';
                 document.getElementById('main-content').style.display = 'block';
@@ -883,16 +884,15 @@
                     document.getElementById('main-content').style.display = 'block';
                     sessionStorage.setItem('turnstile_verified', 'true');
                 };
-                const siteKey = '0x4AAAAAAECMC70gbBSVMOrf';
-                if (typeof turnstile !== 'undefined') {
-                    turnstile.render('#turnstile-widget', {
-                        sitekey: siteKey,
-                        callback: window.onTurnstileSuccess,
-                        theme: 'dark'
-                    });
-                }
+                const siteKey = '0x4AAAAAAECPz2Rv5bXploby';
+                turnstile.render('#turnstile-widget', {
+                    sitekey: siteKey,
+                    callback: window.onTurnstileSuccess,
+                    theme: 'dark'
+                });
             }
 
+            // Menú hamburguesa y navbar scroll (se ejecuta después de que el contenido existe)
             const hamburgerBtn = document.getElementById('hamburgerBtn');
             const mobileMenu = document.getElementById('mobileMenu');
             const mobileOverlay = document.getElementById('mobileOverlay');
@@ -911,31 +911,34 @@
                 body.style.overflow = '';
             }
             function toggleMenu() {
-                if (mobileMenu.classList.contains('open')) { closeMenu(); } else { openMenu(); }
+                if (mobileMenu.classList.contains('open')) closeMenu();
+                else openMenu();
             }
-            hamburgerBtn.addEventListener('click', toggleMenu);
-            mobileOverlay.addEventListener('click', closeMenu);
-            document.querySelectorAll('#mobileMenu a').forEach(function(link) {
-                link.addEventListener('click', function() { setTimeout(closeMenu, 150); });
-            });
-            let touchStartX = 0;
-            mobileMenu.addEventListener('touchstart', function(e) { touchStartX = e.touches[0].clientX; }, { passive: true });
-            mobileMenu.addEventListener('touchend', function(e) {
-                const touchEndX = e.changedTouches[0].clientX;
-                if (touchEndX - touchStartX > 60) { closeMenu(); }
-            });
-            document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeMenu(); });
-            const navbar = document.getElementById('navbar');
-            let lastScrollY = 0;
-            window.addEventListener('scroll', function() {
-                const scrollY = window.scrollY;
-                if (scrollY > 100 && scrollY > lastScrollY) {
-                    navbar.style.transform = 'translateY(-100%)';
-                } else {
-                    navbar.style.transform = 'translateY(0)';
-                }
-                lastScrollY = scrollY;
-            }, { passive: true });
+            if (hamburgerBtn) {
+                hamburgerBtn.addEventListener('click', toggleMenu);
+                mobileOverlay.addEventListener('click', closeMenu);
+                document.querySelectorAll('#mobileMenu a').forEach(function(link) {
+                    link.addEventListener('click', function() { setTimeout(closeMenu, 150); });
+                });
+                let touchStartX = 0;
+                mobileMenu.addEventListener('touchstart', function(e) { touchStartX = e.touches[0].clientX; }, { passive: true });
+                mobileMenu.addEventListener('touchend', function(e) {
+                    const touchEndX = e.changedTouches[0].clientX;
+                    if (touchEndX - touchStartX > 60) closeMenu();
+                });
+                document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeMenu(); });
+                const navbar = document.getElementById('navbar');
+                let lastScrollY = 0;
+                window.addEventListener('scroll', function() {
+                    const scrollY = window.scrollY;
+                    if (scrollY > 100 && scrollY > lastScrollY) {
+                        navbar.style.transform = 'translateY(-100%)';
+                    } else {
+                        navbar.style.transform = 'translateY(0)';
+                    }
+                    lastScrollY = scrollY;
+                }, { passive: true });
+            }
         })();
     </script>
 </body>
