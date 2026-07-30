@@ -2,11 +2,11 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="256x256" href="favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>JervDev | Testimonios</title>
-    <meta name="description" content="Testimonios de clientes satisfechos con el trabajo de JervDev en diseño y desarrollo web.">
+    <title>ALFAZentic Studio | Testimonios</title>
+    <meta name="description" content="Testimonios de clientes satisfechos con el trabajo de ALFAZentic Studio. Conoce las experiencias de quienes confiaron en JervDev para su presencia digital.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
@@ -18,7 +18,6 @@
             --bg-surface: #151829;
             --purple: #7c3aed;
             --purple-light: #a78bfa;
-            --purple-glow: rgba(124, 58, 237, 0.4);
             --text-primary: #f1f5f9;
             --text-secondary: #94a3b8;
             --border-subtle: rgba(255, 255, 255, 0.06);
@@ -52,12 +51,8 @@
             -moz-osx-font-smoothing: grayscale;
             min-height: 100vh;
         }
-        .text-purple {
-            color: var(--purple);
-        }
-        .text-purple-light {
-            color: var(--purple-light);
-        }
+        .text-purple { color: var(--purple); }
+        .text-purple-light { color: var(--purple-light); }
         .section-label {
             display: inline-flex;
             align-items: center;
@@ -82,13 +77,8 @@
             animation: pulse-dot 2s ease-in-out infinite;
         }
         @keyframes pulse-dot {
-            0%,
-            100% {
-                box-shadow: 0 0 0 0 rgba(124, 58, 237, 0.7);
-            }
-            50% {
-                box-shadow: 0 0 0 12px rgba(124, 58, 237, 0);
-            }
+            0%, 100% { box-shadow: 0 0 0 0 rgba(124, 58, 237, 0.7); }
+            50% { box-shadow: 0 0 0 12px rgba(124, 58, 237, 0); }
         }
         .section-title {
             font-weight: 800;
@@ -197,9 +187,7 @@
             color: var(--purple-light);
             font-weight: 600;
         }
-        .navbar-cta {
-            margin-left: 12px;
-        }
+        .navbar-cta { margin-left: 12px; }
         .navbar-cta .btn-primary-glow {
             padding: 10px 22px;
             font-size: 0.9rem;
@@ -219,9 +207,7 @@
             border-radius: 50%;
             transition: var(--transition-fast);
         }
-        .hamburger-btn:hover {
-            background: rgba(255, 255, 255, 0.05);
-        }
+        .hamburger-btn:hover { background: rgba(255, 255, 255, 0.05); }
         .hamburger-line {
             display: block;
             width: 24px;
@@ -231,27 +217,12 @@
             transition: var(--transition-smooth);
             position: absolute;
         }
-        .hamburger-line:nth-child(1) {
-            top: 14px;
-        }
-        .hamburger-line:nth-child(2) {
-            top: 21px;
-        }
-        .hamburger-line:nth-child(3) {
-            top: 28px;
-        }
-        .hamburger-btn.open .hamburger-line:nth-child(1) {
-            top: 21px;
-            transform: rotate(45deg);
-        }
-        .hamburger-btn.open .hamburger-line:nth-child(2) {
-            opacity: 0;
-            transform: scaleX(0);
-        }
-        .hamburger-btn.open .hamburger-line:nth-child(3) {
-            top: 21px;
-            transform: rotate(-45deg);
-        }
+        .hamburger-line:nth-child(1) { top: 14px; }
+        .hamburger-line:nth-child(2) { top: 21px; }
+        .hamburger-line:nth-child(3) { top: 28px; }
+        .hamburger-btn.open .hamburger-line:nth-child(1) { top: 21px; transform: rotate(45deg); }
+        .hamburger-btn.open .hamburger-line:nth-child(2) { opacity: 0; transform: scaleX(0); }
+        .hamburger-btn.open .hamburger-line:nth-child(3) { top: 21px; transform: rotate(-45deg); }
         .mobile-menu-overlay {
             position: fixed;
             inset: 0;
@@ -263,10 +234,7 @@
             backdrop-filter: blur(4px);
             -webkit-backdrop-filter: blur(4px);
         }
-        .mobile-menu-overlay.open {
-            opacity: 1;
-            pointer-events: all;
-        }
+        .mobile-menu-overlay.open { opacity: 1; pointer-events: all; }
         .mobile-menu {
             position: fixed;
             top: 0;
@@ -286,9 +254,7 @@
             box-shadow: -10px 0 40px rgba(0, 0, 0, 0.5);
             overflow-y: auto;
         }
-        .mobile-menu.open {
-            right: 0;
-        }
+        .mobile-menu.open { right: 0; }
         .mobile-menu a {
             display: block;
             color: #e2e8f0;
@@ -298,26 +264,12 @@
             border-radius: 14px;
             transition: var(--transition-fast);
             font-size: 1.05rem;
-            letter-spacing: 0.01em;
         }
         .mobile-menu a:hover,
-        .mobile-menu a.active {
-            background: rgba(124, 58, 237, 0.15);
-            color: #fff;
-        }
-        .mobile-menu a.active {
-            color: var(--purple-light);
-            font-weight: 700;
-        }
-        .mobile-menu .mobile-cta {
-            margin-top: 20px;
-        }
-        .mobile-menu .mobile-cta .btn-primary-glow {
-            width: 100%;
-            justify-content: center;
-            padding: 15px 24px;
-            font-size: 1rem;
-        }
+        .mobile-menu a.active { background: rgba(124, 58, 237, 0.15); color: #fff; }
+        .mobile-menu a.active { color: var(--purple-light); font-weight: 700; }
+        .mobile-menu .mobile-cta { margin-top: 20px; }
+        .mobile-menu .mobile-cta .btn-primary-glow { width: 100%; justify-content: center; padding: 15px 24px; font-size: 1rem; }
         .page-header {
             padding: 120px 24px 60px;
             text-align: center;
@@ -336,36 +288,12 @@
             background: radial-gradient(circle, rgba(124, 58, 237, 0.1) 0%, transparent 70%);
             pointer-events: none;
         }
-        .page-header .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-        .testimonials-section {
-            padding: 40px 0 80px;
-            background: var(--bg-deep);
-        }
-        .testimonials-section .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-        .testimonial-carousel {
-            position: relative;
-            overflow: hidden;
-            border-radius: var(--radius-xl);
-        }
-        .testimonial-track {
-            display: flex;
-            transition: transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
-            will-change: transform;
-        }
-        .testimonial-slide {
-            min-width: 100%;
-            padding: 20px;
-            box-sizing: border-box;
-        }
+        .page-header .container { max-width: 1280px; margin: 0 auto; position: relative; z-index: 1; }
+        .testimonials-section { padding: 40px 0 80px; background: var(--bg-deep); }
+        .testimonials-section .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+        .testimonial-carousel { position: relative; overflow: hidden; border-radius: var(--radius-xl); }
+        .testimonial-track { display: flex; transition: transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1); will-change: transform; }
+        .testimonial-slide { min-width: 100%; padding: 20px; box-sizing: border-box; }
         .testimonial-card {
             background: var(--bg-surface);
             border: 1px solid var(--border-subtle);
@@ -402,27 +330,10 @@
             box-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
             margin-bottom: 12px;
         }
-        .testimonial-card .testimonial-author {
-            font-weight: 700;
-            font-size: 1.05rem;
-            color: #fff;
-        }
-        .testimonial-card .testimonial-role {
-            color: #94a3b8;
-            font-size: 0.85rem;
-        }
-        .testimonial-card .stars {
-            color: #f59e0b;
-            font-size: 1rem;
-            margin-bottom: 12px;
-        }
-        .carousel-controls {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 28px;
-        }
+        .testimonial-card .testimonial-author { font-weight: 700; font-size: 1.05rem; color: #fff; }
+        .testimonial-card .testimonial-role { color: #94a3b8; font-size: 0.85rem; }
+        .testimonial-card .stars { color: #f59e0b; font-size: 1rem; margin-bottom: 12px; }
+        .carousel-controls { display: flex; align-items: center; justify-content: center; gap: 20px; margin-top: 28px; }
         .carousel-btn {
             width: 48px;
             height: 48px;
@@ -443,10 +354,7 @@
             box-shadow: 0 8px 25px rgba(124, 58, 237, 0.4);
             transform: scale(1.08);
         }
-        .carousel-dots {
-            display: flex;
-            gap: 10px;
-        }
+        .carousel-dots { display: flex; gap: 10px; }
         .carousel-dot {
             width: 10px;
             height: 10px;
@@ -467,69 +375,23 @@
             border-top: 1px solid rgba(255, 255, 255, 0.04);
             padding: 32px 0;
         }
-        .footer-section .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-        .footer-grid {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 16px;
-        }
-        .footer-brand {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: #fff;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.2rem;
-        }
-        .footer-links a {
-            color: #94a3b8;
-            text-decoration: none;
-            font-size: 0.85rem;
-            transition: var(--transition-fast);
-            margin-left: 20px;
-        }
-        .footer-links a:hover {
-            color: var(--purple-light);
-        }
-        .footer-copy {
-            color: #64748b;
-            font-size: 0.8rem;
-        }
+        .footer-section .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+        .footer-grid { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+        .footer-brand { display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; font-weight: 700; font-size: 1.2rem; }
+        .footer-links a { color: #94a3b8; text-decoration: none; font-size: 0.85rem; transition: var(--transition-fast); margin-left: 20px; }
+        .footer-links a:hover { color: var(--purple-light); }
+        .footer-copy { color: #64748b; font-size: 0.8rem; }
         @media (max-width: 992px) {
-            .navbar-links {
-                display: none;
-            }
-            .navbar-cta {
-                display: none;
-            }
-            .hamburger-btn {
-                display: flex;
-            }
-            .section-title {
-                font-size: 2rem;
-            }
+            .navbar-links { display: none; }
+            .navbar-cta { display: none; }
+            .hamburger-btn { display: flex; }
+            .section-title { font-size: 2rem; }
         }
         @media (max-width: 600px) {
-            .testimonial-card {
-                padding: 28px 18px;
-            }
-            .testimonial-card .testimonial-text {
-                font-size: 1rem;
-            }
-            .footer-grid {
-                flex-direction: column;
-                text-align: center;
-            }
-            .footer-links a {
-                margin: 0 10px;
-            }
+            .testimonial-card { padding: 28px 18px; }
+            .testimonial-card .testimonial-text { font-size: 1rem; }
+            .footer-grid { flex-direction: column; text-align: center; }
+            .footer-links a { margin: 0 10px; }
         }
     </style>
 </head>
@@ -537,7 +399,7 @@
     <nav class="navbar" id="navbar">
         <div class="container">
             <a href="index.html" class="navbar-brand">
-                <span class="brand-icon"><i class="bi bi-brush-fill"></i></span>Jerv<span class="text-purple">Dev</span>
+                <span class="brand-icon"><i class="bi bi-brush-fill"></i></span>ALFA<span class="text-purple">Zentic</span> Studio
             </a>
             <ul class="navbar-links" id="navbarLinks">
                 <li><a href="index.html">Inicio</a></li>
@@ -567,7 +429,7 @@
         <div class="container">
             <span class="section-label">Testimonios</span>
             <h1 class="section-title">Lo que dicen <span class="text-purple">mis clientes</span></h1>
-            <p class="section-subtitle" style="margin:0 auto;">La satisfacción de mis clientes es mi mejor carta de presentación. Conoce sus experiencias.</p>
+            <p class="section-subtitle" style="margin:0 auto;">La satisfacción de quienes confían en ALFAZentic Studio es mi mejor carta de presentación. Conoce sus experiencias.</p>
         </div>
     </section>
     <section class="testimonials-section">
@@ -578,7 +440,7 @@
                         <div class="testimonial-card">
                             <i class="bi bi-quote quote-icon"></i>
                             <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-                            <p class="testimonial-text">Jerv transformó por completo nuestra presencia online. El nuevo sitio no solo es hermoso, sino que nuestras ventas aumentaron considerablemente en el primer mes. Su atención al detalle es impresionante.</p>
+                            <p class="testimonial-text">JervDev transformó por completo nuestra presencia online. El nuevo sitio no solo es hermoso, sino que nuestras ventas aumentaron considerablemente en el primer mes. Su atención al detalle es impresionante.</p>
                             <img src="https://picsum.photos/seed/user1/70/70" class="testimonial-author-img" alt="Laura Méndez" loading="lazy">
                             <div class="testimonial-author">Laura Méndez</div>
                             <div class="testimonial-role">CEO, TechStart</div>
@@ -608,7 +470,7 @@
                         <div class="testimonial-card">
                             <i class="bi bi-quote quote-icon"></i>
                             <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-                            <p class="testimonial-text">Trabajar con JervDev fue una experiencia increíble. Cumplió con todos los plazos, el código es limpio y el soporte post-lanzamiento ha sido excepcional. Volveremos a trabajar juntos.</p>
+                            <p class="testimonial-text">Trabajar con JervDev y ALFAZentic Studio fue una experiencia increíble. Cumplió con todos los plazos, el código es limpio y el soporte post-lanzamiento ha sido excepcional. Volveremos a trabajar juntos.</p>
                             <img src="https://picsum.photos/seed/user4/70/70" class="testimonial-author-img" alt="Alejandro Torres" loading="lazy">
                             <div class="testimonial-author">Alejandro Torres</div>
                             <div class="testimonial-role">CTO, DataFlow Systems</div>
@@ -631,8 +493,8 @@
     <footer class="footer-section">
         <div class="container">
             <div class="footer-grid">
-                <a href="index.html" class="footer-brand"><i class="bi bi-brush-fill text-purple"></i> Jerv<span class="text-purple">Dev</span></a>
-                <span class="footer-copy">&copy; 2026 JervDev. Todos los derechos reservados.</span>
+                <a href="index.html" class="footer-brand"><i class="bi bi-brush-fill text-purple"></i> ALFA<span class="text-purple">Zentic</span> Studio</a>
+                <span class="footer-copy">&copy; 2026 ALFAZentic Studio. Creado por JervDev.</span>
                 <div class="footer-links">
                     <a href="#">Política de privacidad</a>
                     <a href="#">Términos de uso</a>
@@ -647,64 +509,39 @@
             const mobileMenu = document.getElementById('mobileMenu');
             const mobileOverlay = document.getElementById('mobileOverlay');
             const body = document.body;
-
-            function openMenu() { hamburgerBtn.classList.add('open');
-                mobileMenu.classList.add('open');
-                mobileOverlay.classList.add('open');
-                body.style.overflow = 'hidden'; }
-
-            function closeMenu() { hamburgerBtn.classList.remove('open');
-                mobileMenu.classList.remove('open');
-                mobileOverlay.classList.remove('open');
-                body.style.overflow = ''; }
-
+            function openMenu() { hamburgerBtn.classList.add('open'); mobileMenu.classList.add('open'); mobileOverlay.classList.add('open'); body.style.overflow = 'hidden'; }
+            function closeMenu() { hamburgerBtn.classList.remove('open'); mobileMenu.classList.remove('open'); mobileOverlay.classList.remove('open'); body.style.overflow = ''; }
             function toggleMenu() { if (mobileMenu.classList.contains('open')) { closeMenu(); } else { openMenu(); } }
             hamburgerBtn.addEventListener('click', toggleMenu);
             mobileOverlay.addEventListener('click', closeMenu);
-            document.querySelectorAll('#mobileMenu a').forEach(function(link) { link.addEventListener('click', function() {
-                    setTimeout(closeMenu, 150); }); });
+            document.querySelectorAll('#mobileMenu a').forEach(function(link) { link.addEventListener('click', function() { setTimeout(closeMenu, 150); }); });
             let touchStartX = 0;
             mobileMenu.addEventListener('touchstart', function(e) { touchStartX = e.touches[0].clientX; }, { passive: true });
-            mobileMenu.addEventListener('touchend', function(e) { const touchEndX = e.changedTouches[0].clientX; if (
-                    touchEndX - touchStartX > 60) { closeMenu(); } });
+            mobileMenu.addEventListener('touchend', function(e) { const touchEndX = e.changedTouches[0].clientX; if (touchEndX - touchStartX > 60) { closeMenu(); } });
             document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeMenu(); });
             const navbar = document.getElementById('navbar');
             let lastScrollY = 0;
-            window.addEventListener('scroll', function() { const scrollY = window.scrollY; if (scrollY > 100 && scrollY >
-                    lastScrollY) { navbar.style.transform = 'translateY(-100%)'; } else { navbar.style.transform =
-                        'translateY(0)'; }
-                lastScrollY = scrollY; }, { passive: true });
+            window.addEventListener('scroll', function() { const scrollY = window.scrollY; if (scrollY > 100 && scrollY > lastScrollY) { navbar.style.transform = 'translateY(-100%)'; } else { navbar.style.transform = 'translateY(0)'; } lastScrollY = scrollY; }, { passive: true });
             const track = document.getElementById('testimonialTrack');
             const dots = document.querySelectorAll('#carouselDots .carousel-dot');
             const prevBtn = document.getElementById('prevBtn');
             const nextBtn = document.getElementById('nextBtn');
             const totalSlides = 4;
             let currentIndex = 0;
-
             function updateCarousel() {
                 track.style.transform = 'translateX(-' + (currentIndex * 100) + '%)';
                 dots.forEach(function(dot, i) { dot.classList.toggle('active', i === currentIndex); });
             }
-            prevBtn.addEventListener('click', function() { currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-                updateCarousel(); });
-            nextBtn.addEventListener('click', function() { currentIndex = (currentIndex + 1) % totalSlides;
-            updateCarousel(); });
-            dots.forEach(function(dot) { dot.addEventListener('click', function() { currentIndex = parseInt(this
-                        .getAttribute('data-index'));
-                    updateCarousel(); }); });
-            let autoPlay = setInterval(function() { currentIndex = (currentIndex + 1) % totalSlides;
-                updateCarousel(); }, 5000);
+            prevBtn.addEventListener('click', function() { currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; updateCarousel(); });
+            nextBtn.addEventListener('click', function() { currentIndex = (currentIndex + 1) % totalSlides; updateCarousel(); });
+            dots.forEach(function(dot) { dot.addEventListener('click', function() { currentIndex = parseInt(this.getAttribute('data-index')); updateCarousel(); }); });
+            let autoPlay = setInterval(function() { currentIndex = (currentIndex + 1) % totalSlides; updateCarousel(); }, 5000);
             const carouselContainer = document.getElementById('testimonialCarousel');
             carouselContainer.addEventListener('mouseenter', function() { clearInterval(autoPlay); });
-            carouselContainer.addEventListener('mouseleave', function() { autoPlay = setInterval(function() { currentIndex = (
-                        currentIndex + 1) % totalSlides;
-                    updateCarousel(); }, 5000); });
+            carouselContainer.addEventListener('mouseleave', function() { autoPlay = setInterval(function() { currentIndex = (currentIndex + 1) % totalSlides; updateCarousel(); }, 5000); });
             let touchStartX2 = 0;
             track.addEventListener('touchstart', function(e) { touchStartX2 = e.touches[0].clientX; }, { passive: true });
-            track.addEventListener('touchend', function(e) { const diff = touchStartX2 - e.changedTouches[0].clientX; if (
-                    Math.abs(diff) > 40) { if (diff > 0) { currentIndex = (currentIndex + 1) % totalSlides; } else {
-                        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; }
-                    updateCarousel(); } });
+            track.addEventListener('touchend', function(e) { const diff = touchStartX2 - e.changedTouches[0].clientX; if (Math.abs(diff) > 40) { if (diff > 0) { currentIndex = (currentIndex + 1) % totalSlides; } else { currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; } updateCarousel(); } });
         })();
     </script>
 </body>
