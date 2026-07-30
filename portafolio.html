@@ -2,11 +2,11 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="256x256" href="favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>JervDev | Portafolio</title>
-    <meta name="description" content="Portafolio de JervDev - Proyectos recientes de diseño y desarrollo web profesional.">
+    <title>ALFAZentic Studio | Portafolio</title>
+    <meta name="description" content="Portafolio de ALFAZentic Studio. Proyectos recientes de diseño y desarrollo web profesional creados por JervDev.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
@@ -18,7 +18,6 @@
             --bg-surface: #151829;
             --purple: #7c3aed;
             --purple-light: #a78bfa;
-            --purple-glow: rgba(124, 58, 237, 0.4);
             --text-primary: #f1f5f9;
             --text-secondary: #94a3b8;
             --border-subtle: rgba(255, 255, 255, 0.06);
@@ -52,12 +51,8 @@
             -moz-osx-font-smoothing: grayscale;
             min-height: 100vh;
         }
-        .text-purple {
-            color: var(--purple);
-        }
-        .text-purple-light {
-            color: var(--purple-light);
-        }
+        .text-purple { color: var(--purple); }
+        .text-purple-light { color: var(--purple-light); }
         .section-label {
             display: inline-flex;
             align-items: center;
@@ -82,13 +77,8 @@
             animation: pulse-dot 2s ease-in-out infinite;
         }
         @keyframes pulse-dot {
-            0%,
-            100% {
-                box-shadow: 0 0 0 0 rgba(124, 58, 237, 0.7);
-            }
-            50% {
-                box-shadow: 0 0 0 12px rgba(124, 58, 237, 0);
-            }
+            0%, 100% { box-shadow: 0 0 0 0 rgba(124, 58, 237, 0.7); }
+            50% { box-shadow: 0 0 0 12px rgba(124, 58, 237, 0); }
         }
         .section-title {
             font-weight: 800;
@@ -197,9 +187,7 @@
             color: var(--purple-light);
             font-weight: 600;
         }
-        .navbar-cta {
-            margin-left: 12px;
-        }
+        .navbar-cta { margin-left: 12px; }
         .navbar-cta .btn-primary-glow {
             padding: 10px 22px;
             font-size: 0.9rem;
@@ -219,9 +207,7 @@
             border-radius: 50%;
             transition: var(--transition-fast);
         }
-        .hamburger-btn:hover {
-            background: rgba(255, 255, 255, 0.05);
-        }
+        .hamburger-btn:hover { background: rgba(255, 255, 255, 0.05); }
         .hamburger-line {
             display: block;
             width: 24px;
@@ -231,27 +217,12 @@
             transition: var(--transition-smooth);
             position: absolute;
         }
-        .hamburger-line:nth-child(1) {
-            top: 14px;
-        }
-        .hamburger-line:nth-child(2) {
-            top: 21px;
-        }
-        .hamburger-line:nth-child(3) {
-            top: 28px;
-        }
-        .hamburger-btn.open .hamburger-line:nth-child(1) {
-            top: 21px;
-            transform: rotate(45deg);
-        }
-        .hamburger-btn.open .hamburger-line:nth-child(2) {
-            opacity: 0;
-            transform: scaleX(0);
-        }
-        .hamburger-btn.open .hamburger-line:nth-child(3) {
-            top: 21px;
-            transform: rotate(-45deg);
-        }
+        .hamburger-line:nth-child(1) { top: 14px; }
+        .hamburger-line:nth-child(2) { top: 21px; }
+        .hamburger-line:nth-child(3) { top: 28px; }
+        .hamburger-btn.open .hamburger-line:nth-child(1) { top: 21px; transform: rotate(45deg); }
+        .hamburger-btn.open .hamburger-line:nth-child(2) { opacity: 0; transform: scaleX(0); }
+        .hamburger-btn.open .hamburger-line:nth-child(3) { top: 21px; transform: rotate(-45deg); }
         .mobile-menu-overlay {
             position: fixed;
             inset: 0;
@@ -263,10 +234,7 @@
             backdrop-filter: blur(4px);
             -webkit-backdrop-filter: blur(4px);
         }
-        .mobile-menu-overlay.open {
-            opacity: 1;
-            pointer-events: all;
-        }
+        .mobile-menu-overlay.open { opacity: 1; pointer-events: all; }
         .mobile-menu {
             position: fixed;
             top: 0;
@@ -286,9 +254,7 @@
             box-shadow: -10px 0 40px rgba(0, 0, 0, 0.5);
             overflow-y: auto;
         }
-        .mobile-menu.open {
-            right: 0;
-        }
+        .mobile-menu.open { right: 0; }
         .mobile-menu a {
             display: block;
             color: #e2e8f0;
@@ -298,26 +264,12 @@
             border-radius: 14px;
             transition: var(--transition-fast);
             font-size: 1.05rem;
-            letter-spacing: 0.01em;
         }
         .mobile-menu a:hover,
-        .mobile-menu a.active {
-            background: rgba(124, 58, 237, 0.15);
-            color: #fff;
-        }
-        .mobile-menu a.active {
-            color: var(--purple-light);
-            font-weight: 700;
-        }
-        .mobile-menu .mobile-cta {
-            margin-top: 20px;
-        }
-        .mobile-menu .mobile-cta .btn-primary-glow {
-            width: 100%;
-            justify-content: center;
-            padding: 15px 24px;
-            font-size: 1rem;
-        }
+        .mobile-menu a.active { background: rgba(124, 58, 237, 0.15); color: #fff; }
+        .mobile-menu a.active { color: var(--purple-light); font-weight: 700; }
+        .mobile-menu .mobile-cta { margin-top: 20px; }
+        .mobile-menu .mobile-cta .btn-primary-glow { width: 100%; justify-content: center; padding: 15px 24px; font-size: 1rem; }
         .page-header {
             padding: 120px 24px 60px;
             text-align: center;
@@ -336,21 +288,9 @@
             background: radial-gradient(circle, rgba(124, 58, 237, 0.1) 0%, transparent 70%);
             pointer-events: none;
         }
-        .page-header .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-        .portfolio-section {
-            padding: 40px 0 80px;
-            background: var(--bg-deep);
-        }
-        .portfolio-section .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
+        .page-header .container { max-width: 1280px; margin: 0 auto; position: relative; z-index: 1; }
+        .portfolio-section { padding: 40px 0 80px; background: var(--bg-deep); }
+        .portfolio-section .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -377,9 +317,7 @@
             object-fit: cover;
             transition: transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
         }
-        .portfolio-item:hover img {
-            transform: scale(1.08);
-        }
+        .portfolio-item:hover img { transform: scale(1.08); }
         .portfolio-overlay {
             position: absolute;
             bottom: 0;
@@ -396,16 +334,8 @@
             transform: translateY(0);
             opacity: 1;
         }
-        .portfolio-overlay h5 {
-            font-weight: 700;
-            font-size: 1.15rem;
-            margin-bottom: 4px;
-        }
-        .portfolio-overlay small {
-            color: var(--purple-light);
-            font-weight: 500;
-            font-size: 0.8rem;
-        }
+        .portfolio-overlay h5 { font-weight: 700; font-size: 1.15rem; margin-bottom: 4px; }
+        .portfolio-overlay small { color: var(--purple-light); font-weight: 500; font-size: 0.8rem; }
         .portfolio-overlay .portfolio-tag {
             display: inline-block;
             background: rgba(124, 58, 237, 0.2);
@@ -416,71 +346,23 @@
             font-weight: 600;
             margin-top: 8px;
         }
-        .footer-section {
-            background: #05070d;
-            border-top: 1px solid rgba(255, 255, 255, 0.04);
-            padding: 32px 0;
-        }
-        .footer-section .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-        .footer-grid {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 16px;
-        }
-        .footer-brand {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: #fff;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.2rem;
-        }
-        .footer-links a {
-            color: #94a3b8;
-            text-decoration: none;
-            font-size: 0.85rem;
-            transition: var(--transition-fast);
-            margin-left: 20px;
-        }
-        .footer-links a:hover {
-            color: var(--purple-light);
-        }
-        .footer-copy {
-            color: #64748b;
-            font-size: 0.8rem;
-        }
+        .footer-section { background: #05070d; border-top: 1px solid rgba(255,255,255,0.04); padding: 32px 0; }
+        .footer-section .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+        .footer-grid { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+        .footer-brand { display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; font-weight: 700; font-size: 1.2rem; }
+        .footer-links a { color: #94a3b8; text-decoration: none; font-size: 0.85rem; transition: var(--transition-fast); margin-left: 20px; }
+        .footer-links a:hover { color: var(--purple-light); }
+        .footer-copy { color: #64748b; font-size: 0.8rem; }
         @media (max-width: 992px) {
-            .navbar-links {
-                display: none;
-            }
-            .navbar-cta {
-                display: none;
-            }
-            .hamburger-btn {
-                display: flex;
-            }
-            .section-title {
-                font-size: 2rem;
-            }
+            .navbar-links { display: none; }
+            .navbar-cta { display: none; }
+            .hamburger-btn { display: flex; }
+            .section-title { font-size: 2rem; }
         }
         @media (max-width: 600px) {
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-            }
-            .footer-grid {
-                flex-direction: column;
-                text-align: center;
-            }
-            .footer-links a {
-                margin: 0 10px;
-            }
+            .portfolio-grid { grid-template-columns: 1fr; }
+            .footer-grid { flex-direction: column; text-align: center; }
+            .footer-links a { margin: 0 10px; }
         }
     </style>
 </head>
@@ -488,7 +370,7 @@
     <nav class="navbar" id="navbar">
         <div class="container">
             <a href="index.html" class="navbar-brand">
-                <span class="brand-icon"><i class="bi bi-brush-fill"></i></span>Jerv<span class="text-purple">Dev</span>
+                <span class="brand-icon"><i class="bi bi-brush-fill"></i></span>ALFA<span class="text-purple">Zentic</span> Studio
             </a>
             <ul class="navbar-links" id="navbarLinks">
                 <li><a href="index.html">Inicio</a></li>
@@ -518,7 +400,7 @@
         <div class="container">
             <span class="section-label">Mi trabajo</span>
             <h1 class="section-title">Proyectos <span class="text-purple">recientes</span></h1>
-            <p class="section-subtitle" style="margin:0 auto;">Cada proyecto es único. Aquí tienes una muestra de mi calidad y estilo en diseño y desarrollo web profesional.</p>
+            <p class="section-subtitle" style="margin:0 auto;">Cada proyecto es único. Aquí tienes una muestra de la calidad y estilo de ALFAZentic Studio, creado por JervDev.</p>
         </div>
     </section>
     <section class="portfolio-section">
@@ -529,7 +411,7 @@
                     <div class="portfolio-overlay">
                         <h5>E-commerce Fashion</h5>
                         <small>Tienda online de moda con carrito de compras</small>
-                        <span class="portfolio-tag">UI/UX • Desarrollo</span>
+                        <span class="portfolio-tag">UI/UX · Desarrollo</span>
                     </div>
                 </div>
                 <div class="portfolio-item">
@@ -537,7 +419,7 @@
                     <div class="portfolio-overlay">
                         <h5>App de Entregas</h5>
                         <small>Plataforma de delivery con tracking en tiempo real</small>
-                        <span class="portfolio-tag">Móvil • Branding</span>
+                        <span class="portfolio-tag">Móvil · Branding</span>
                     </div>
                 </div>
                 <div class="portfolio-item">
@@ -545,7 +427,7 @@
                     <div class="portfolio-overlay">
                         <h5>Landing Page SaaS</h5>
                         <small>Página de aterrizaje para startup de software</small>
-                        <span class="portfolio-tag">Diseño • SEO</span>
+                        <span class="portfolio-tag">Diseño · SEO</span>
                     </div>
                 </div>
                 <div class="portfolio-item">
@@ -553,7 +435,7 @@
                     <div class="portfolio-overlay">
                         <h5>Portal Educativo</h5>
                         <small>Plataforma de cursos online con aulas virtuales</small>
-                        <span class="portfolio-tag">UX • Desarrollo</span>
+                        <span class="portfolio-tag">UX · Desarrollo</span>
                     </div>
                 </div>
                 <div class="portfolio-item">
@@ -561,7 +443,7 @@
                     <div class="portfolio-overlay">
                         <h5>Restaurante Gourmet</h5>
                         <small>Sitio web con sistema de reservas online</small>
-                        <span class="portfolio-tag">Diseño • Reservas</span>
+                        <span class="portfolio-tag">Diseño · Reservas</span>
                     </div>
                 </div>
                 <div class="portfolio-item">
@@ -569,7 +451,7 @@
                     <div class="portfolio-overlay">
                         <h5>Blog de Tecnología</h5>
                         <small>Portal de noticias tech con miles de lectores</small>
-                        <span class="portfolio-tag">Content • UX</span>
+                        <span class="portfolio-tag">Content · UX</span>
                     </div>
                 </div>
             </div>
@@ -578,8 +460,8 @@
     <footer class="footer-section">
         <div class="container">
             <div class="footer-grid">
-                <a href="index.html" class="footer-brand"><i class="bi bi-brush-fill text-purple"></i> Jerv<span class="text-purple">Dev</span></a>
-                <span class="footer-copy">&copy; 2026 JervDev. Todos los derechos reservados.</span>
+                <a href="index.html" class="footer-brand"><i class="bi bi-brush-fill text-purple"></i> ALFA<span class="text-purple">Zentic</span> Studio</a>
+                <span class="footer-copy">&copy; 2026 ALFAZentic Studio. Creado por JervDev.</span>
                 <div class="footer-links">
                     <a href="#">Política de privacidad</a>
                     <a href="#">Términos de uso</a>
@@ -594,33 +476,19 @@
             const mobileMenu = document.getElementById('mobileMenu');
             const mobileOverlay = document.getElementById('mobileOverlay');
             const body = document.body;
-
-            function openMenu() { hamburgerBtn.classList.add('open');
-                mobileMenu.classList.add('open');
-                mobileOverlay.classList.add('open');
-                body.style.overflow = 'hidden'; }
-
-            function closeMenu() { hamburgerBtn.classList.remove('open');
-                mobileMenu.classList.remove('open');
-                mobileOverlay.classList.remove('open');
-                body.style.overflow = ''; }
-
+            function openMenu() { hamburgerBtn.classList.add('open'); mobileMenu.classList.add('open'); mobileOverlay.classList.add('open'); body.style.overflow = 'hidden'; }
+            function closeMenu() { hamburgerBtn.classList.remove('open'); mobileMenu.classList.remove('open'); mobileOverlay.classList.remove('open'); body.style.overflow = ''; }
             function toggleMenu() { if (mobileMenu.classList.contains('open')) { closeMenu(); } else { openMenu(); } }
             hamburgerBtn.addEventListener('click', toggleMenu);
             mobileOverlay.addEventListener('click', closeMenu);
-            document.querySelectorAll('#mobileMenu a').forEach(function(link) { link.addEventListener('click', function() {
-                    setTimeout(closeMenu, 150); }); });
+            document.querySelectorAll('#mobileMenu a').forEach(function(link) { link.addEventListener('click', function() { setTimeout(closeMenu, 150); }); });
             let touchStartX = 0;
             mobileMenu.addEventListener('touchstart', function(e) { touchStartX = e.touches[0].clientX; }, { passive: true });
-            mobileMenu.addEventListener('touchend', function(e) { const touchEndX = e.changedTouches[0].clientX; if (
-                    touchEndX - touchStartX > 60) { closeMenu(); } });
+            mobileMenu.addEventListener('touchend', function(e) { const touchEndX = e.changedTouches[0].clientX; if (touchEndX - touchStartX > 60) { closeMenu(); } });
             document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeMenu(); });
             const navbar = document.getElementById('navbar');
             let lastScrollY = 0;
-            window.addEventListener('scroll', function() { const scrollY = window.scrollY; if (scrollY > 100 && scrollY >
-                    lastScrollY) { navbar.style.transform = 'translateY(-100%)'; } else { navbar.style.transform =
-                        'translateY(0)'; }
-                lastScrollY = scrollY; }, { passive: true });
+            window.addEventListener('scroll', function() { const scrollY = window.scrollY; if (scrollY > 100 && scrollY > lastScrollY) { navbar.style.transform = 'translateY(-100%)'; } else { navbar.style.transform = 'translateY(0)'; } lastScrollY = scrollY; }, { passive: true });
         })();
     </script>
 </body>
