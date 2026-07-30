@@ -648,4 +648,62 @@
 
             function openMenu() { hamburgerBtn.classList.add('open');
                 mobileMenu.classList.add('open');
-                mobileOverlay.classList.add('open
+                mobileOverlay.classList.add('open');
+                body.style.overflow = 'hidden'; }
+
+            function closeMenu() { hamburgerBtn.classList.remove('open');
+                mobileMenu.classList.remove('open');
+                mobileOverlay.classList.remove('open');
+                body.style.overflow = ''; }
+
+            function toggleMenu() { if (mobileMenu.classList.contains('open')) { closeMenu(); } else { openMenu(); } }
+            hamburgerBtn.addEventListener('click', toggleMenu);
+            mobileOverlay.addEventListener('click', closeMenu);
+            document.querySelectorAll('#mobileMenu a').forEach(function(link) { link.addEventListener('click', function() {
+                    setTimeout(closeMenu, 150); }); });
+            let touchStartX = 0;
+            mobileMenu.addEventListener('touchstart', function(e) { touchStartX = e.touches[0].clientX; }, { passive: true });
+            mobileMenu.addEventListener('touchend', function(e) { const touchEndX = e.changedTouches[0].clientX; if (
+                    touchEndX - touchStartX > 60) { closeMenu(); } });
+            document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeMenu(); });
+            const navbar = document.getElementById('navbar');
+            let lastScrollY = 0;
+            window.addEventListener('scroll', function() { const scrollY = window.scrollY; if (scrollY > 100 && scrollY >
+                    lastScrollY) { navbar.style.transform = 'translateY(-100%)'; } else { navbar.style.transform =
+                        'translateY(0)'; }
+                lastScrollY = scrollY; }, { passive: true });
+            const track = document.getElementById('testimonialTrack');
+            const dots = document.querySelectorAll('#carouselDots .carousel-dot');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const totalSlides = 4;
+            let currentIndex = 0;
+
+            function updateCarousel() {
+                track.style.transform = 'translateX(-' + (currentIndex * 100) + '%)';
+                dots.forEach(function(dot, i) { dot.classList.toggle('active', i === currentIndex); });
+            }
+            prevBtn.addEventListener('click', function() { currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                updateCarousel(); });
+            nextBtn.addEventListener('click', function() { currentIndex = (currentIndex + 1) % totalSlides;
+            updateCarousel(); });
+            dots.forEach(function(dot) { dot.addEventListener('click', function() { currentIndex = parseInt(this
+                        .getAttribute('data-index'));
+                    updateCarousel(); }); });
+            let autoPlay = setInterval(function() { currentIndex = (currentIndex + 1) % totalSlides;
+                updateCarousel(); }, 5000);
+            const carouselContainer = document.getElementById('testimonialCarousel');
+            carouselContainer.addEventListener('mouseenter', function() { clearInterval(autoPlay); });
+            carouselContainer.addEventListener('mouseleave', function() { autoPlay = setInterval(function() { currentIndex = (
+                        currentIndex + 1) % totalSlides;
+                    updateCarousel(); }, 5000); });
+            let touchStartX2 = 0;
+            track.addEventListener('touchstart', function(e) { touchStartX2 = e.touches[0].clientX; }, { passive: true });
+            track.addEventListener('touchend', function(e) { const diff = touchStartX2 - e.changedTouches[0].clientX; if (
+                    Math.abs(diff) > 40) { if (diff > 0) { currentIndex = (currentIndex + 1) % totalSlides; } else {
+                        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; }
+                    updateCarousel(); } });
+        })();
+    </script>
+</body>
+</html>
