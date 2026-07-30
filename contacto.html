@@ -49,12 +49,8 @@
             -moz-osx-font-smoothing: grayscale;
             min-height: 100vh;
         }
-        .text-purple {
-            color: var(--purple);
-        }
-        .text-purple-light {
-            color: var(--purple-light);
-        }
+        .text-purple { color: var(--purple); }
+        .text-purple-light { color: var(--purple-light); }
         .section-label {
             display: inline-flex;
             align-items: center;
@@ -79,13 +75,8 @@
             animation: pulse-dot 2s ease-in-out infinite;
         }
         @keyframes pulse-dot {
-            0%,
-            100% {
-                box-shadow: 0 0 0 0 rgba(124, 58, 237, 0.7);
-            }
-            50% {
-                box-shadow: 0 0 0 12px rgba(124, 58, 237, 0);
-            }
+            0%, 100% { box-shadow: 0 0 0 0 rgba(124, 58, 237, 0.7); }
+            50% { box-shadow: 0 0 0 12px rgba(124, 58, 237, 0); }
         }
         .section-title {
             font-weight: 800;
@@ -217,9 +208,7 @@
             color: var(--purple-light);
             font-weight: 600;
         }
-        .navbar-cta {
-            margin-left: 12px;
-        }
+        .navbar-cta { margin-left: 12px; }
         .navbar-cta .btn-primary-glow {
             padding: 10px 22px;
             font-size: 0.9rem;
@@ -239,9 +228,7 @@
             border-radius: 50%;
             transition: var(--transition-fast);
         }
-        .hamburger-btn:hover {
-            background: rgba(255, 255, 255, 0.05);
-        }
+        .hamburger-btn:hover { background: rgba(255, 255, 255, 0.05); }
         .hamburger-line {
             display: block;
             width: 24px;
@@ -251,27 +238,12 @@
             transition: var(--transition-smooth);
             position: absolute;
         }
-        .hamburger-line:nth-child(1) {
-            top: 14px;
-        }
-        .hamburger-line:nth-child(2) {
-            top: 21px;
-        }
-        .hamburger-line:nth-child(3) {
-            top: 28px;
-        }
-        .hamburger-btn.open .hamburger-line:nth-child(1) {
-            top: 21px;
-            transform: rotate(45deg);
-        }
-        .hamburger-btn.open .hamburger-line:nth-child(2) {
-            opacity: 0;
-            transform: scaleX(0);
-        }
-        .hamburger-btn.open .hamburger-line:nth-child(3) {
-            top: 21px;
-            transform: rotate(-45deg);
-        }
+        .hamburger-line:nth-child(1) { top: 14px; }
+        .hamburger-line:nth-child(2) { top: 21px; }
+        .hamburger-line:nth-child(3) { top: 28px; }
+        .hamburger-btn.open .hamburger-line:nth-child(1) { top: 21px; transform: rotate(45deg); }
+        .hamburger-btn.open .hamburger-line:nth-child(2) { opacity: 0; transform: scaleX(0); }
+        .hamburger-btn.open .hamburger-line:nth-child(3) { top: 21px; transform: rotate(-45deg); }
         .mobile-menu-overlay {
             position: fixed;
             inset: 0;
@@ -283,10 +255,7 @@
             backdrop-filter: blur(4px);
             -webkit-backdrop-filter: blur(4px);
         }
-        .mobile-menu-overlay.open {
-            opacity: 1;
-            pointer-events: all;
-        }
+        .mobile-menu-overlay.open { opacity: 1; pointer-events: all; }
         .mobile-menu {
             position: fixed;
             top: 0;
@@ -306,9 +275,7 @@
             box-shadow: -10px 0 40px rgba(0, 0, 0, 0.5);
             overflow-y: auto;
         }
-        .mobile-menu.open {
-            right: 0;
-        }
+        .mobile-menu.open { right: 0; }
         .mobile-menu a {
             display: block;
             color: #e2e8f0;
@@ -320,23 +287,10 @@
             font-size: 1.05rem;
         }
         .mobile-menu a:hover,
-        .mobile-menu a.active {
-            background: rgba(124, 58, 237, 0.15);
-            color: #fff;
-        }
-        .mobile-menu a.active {
-            color: var(--purple-light);
-            font-weight: 700;
-        }
-        .mobile-menu .mobile-cta {
-            margin-top: 20px;
-        }
-        .mobile-menu .mobile-cta .btn-primary-glow {
-            width: 100%;
-            justify-content: center;
-            padding: 15px 24px;
-            font-size: 1rem;
-        }
+        .mobile-menu a.active { background: rgba(124, 58, 237, 0.15); color: #fff; }
+        .mobile-menu a.active { color: var(--purple-light); font-weight: 700; }
+        .mobile-menu .mobile-cta { margin-top: 20px; }
+        .mobile-menu .mobile-cta .btn-primary-glow { width: 100%; justify-content: center; padding: 15px 24px; font-size: 1rem; }
         .page-header {
             padding: 120px 24px 60px;
             text-align: center;
@@ -355,345 +309,102 @@
             background: radial-gradient(circle, rgba(124, 58, 237, 0.1) 0%, transparent 70%);
             pointer-events: none;
         }
-        .page-header .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-        .contact-section {
-            padding: 40px 0 80px;
-            background: var(--bg-deep);
-        }
-        .contact-section .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 40px;
-            align-items: start;
-        }
-        .contact-info-card {
-            background: var(--bg-surface);
-            border: 1px solid var(--border-subtle);
-            border-radius: var(--radius-xl);
-            padding: 32px;
-        }
+        .page-header .container { max-width: 1280px; margin: 0 auto; position: relative; z-index: 1; }
+        .contact-section { padding: 40px 0 80px; background: var(--bg-deep); }
+        .contact-section .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: start; }
+        .contact-info-card { background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-xl); padding: 32px; }
         .contact-info-card .info-item {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            padding: 14px 0;
-            border-bottom: 1px solid var(--border-subtle);
-            color: #e2e8f0;
-            text-decoration: none;
-            transition: var(--transition-fast);
+            display: flex; align-items: center; gap: 14px; padding: 14px 0;
+            border-bottom: 1px solid var(--border-subtle); color: #e2e8f0; text-decoration: none; transition: var(--transition-fast);
         }
-        .contact-info-card .info-item:last-child {
-            border-bottom: none;
-        }
-        .contact-info-card .info-item:hover {
-            color: #fff;
-        }
+        .contact-info-card .info-item:last-child { border-bottom: none; }
+        .contact-info-card .info-item:hover { color: #fff; }
         .contact-info-card .info-icon {
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-            background: rgba(124, 58, 237, 0.12);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            color: var(--purple-light);
-            flex-shrink: 0;
+            width: 42px; height: 42px; border-radius: 50%; background: rgba(124, 58, 237, 0.12);
+            display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: var(--purple-light); flex-shrink: 0;
         }
-        .social-row {
-            display: flex;
-            gap: 12px;
-            margin-top: 16px;
-        }
+        .social-row { display: flex; gap: 12px; margin-top: 16px; }
         .social-btn {
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid var(--border-subtle);
-            color: #e2e8f0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: var(--transition-bounce);
-            font-size: 1.1rem;
+            width: 42px; height: 42px; border-radius: 50%; background: rgba(255,255,255,0.04);
+            border: 1px solid var(--border-subtle); color: #e2e8f0; display: flex; align-items: center; justify-content: center;
+            text-decoration: none; transition: var(--transition-bounce); font-size: 1.1rem;
         }
-        .social-btn:hover {
-            background: var(--purple);
-            border-color: var(--purple);
-            color: #fff;
-            transform: translateY(-4px);
-            box-shadow: 0 8px 20px rgba(124, 58, 237, 0.35);
-        }
-        .contact-form-card {
-            background: var(--bg-surface);
-            border: 1px solid var(--border-subtle);
-            border-radius: var(--radius-xl);
-            padding: 36px;
-        }
-        .contact-form-card .form-group {
-            margin-bottom: 18px;
-        }
-        .contact-form-card label {
-            display: block;
-            color: #e2e8f0;
-            font-weight: 600;
-            margin-bottom: 6px;
-            font-size: 0.9rem;
-            letter-spacing: 0.01em;
-        }
+        .social-btn:hover { background: var(--purple); border-color: var(--purple); color: #fff; transform: translateY(-4px); box-shadow: 0 8px 20px rgba(124,58,237,0.35); }
+        .contact-form-card { background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-xl); padding: 36px; }
+        .contact-form-card .form-group { margin-bottom: 18px; }
+        .contact-form-card label { display: block; color: #e2e8f0; font-weight: 600; margin-bottom: 6px; font-size: 0.9rem; letter-spacing: 0.01em; }
         .contact-form-card input,
         .contact-form-card textarea,
         .contact-form-card select {
-            width: 100%;
-            padding: 13px 16px;
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            color: #fff;
-            font-family: 'Inter', sans-serif;
-            font-size: 0.95rem;
-            transition: var(--transition-fast);
-            outline: none;
-            resize: vertical;
+            width: 100%; padding: 13px 16px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px; color: #fff; font-family: 'Inter', sans-serif; font-size: 0.95rem; transition: var(--transition-fast);
+            outline: none; resize: vertical;
         }
         .contact-form-card input:focus,
         .contact-form-card textarea:focus,
-        .contact-form-card select:focus {
-            border-color: var(--purple);
-            box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.15);
-            background: rgba(255, 255, 255, 0.06);
-        }
+        .contact-form-card select:focus { border-color: var(--purple); box-shadow: 0 0 0 4px rgba(124,58,237,0.15); background: rgba(255,255,255,0.06); }
         .contact-form-card input::placeholder,
-        .contact-form-card textarea::placeholder {
-            color: rgba(255, 255, 255, 0.35);
-        }
+        .contact-form-card textarea::placeholder { color: rgba(255,255,255,0.35); }
         .contact-form-card select {
-            appearance: none;
-            -webkit-appearance: none;
+            appearance: none; -webkit-appearance: none;
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M6 8L1 3h10z' fill='%23a78bfa'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 16px center;
-            padding-right: 40px;
+            background-repeat: no-repeat; background-position: right 16px center; padding-right: 40px;
         }
-        .contact-form-card select option {
-            background: var(--bg-surface);
-            color: #fff;
-        }
-        .faq-section {
-            padding: 60px 0 80px;
-            background: var(--bg-card);
-        }
-        .faq-section .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-        .faq-list {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-top: 32px;
-        }
-        .faq-item {
-            background: var(--bg-surface);
-            border: 1px solid var(--border-subtle);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            transition: var(--transition-smooth);
-        }
-        .faq-item.open {
-            border-color: rgba(124, 58, 237, 0.35);
-            box-shadow: 0 8px 30px rgba(124, 58, 237, 0.1);
-        }
+        .contact-form-card select option { background: var(--bg-surface); color: #fff; }
+        .faq-section { padding: 60px 0 80px; background: var(--bg-card); }
+        .faq-section .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+        .faq-list { display: flex; flex-direction: column; gap: 12px; margin-top: 32px; }
+        .faq-item { background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden; transition: var(--transition-smooth); }
+        .faq-item.open { border-color: rgba(124,58,237,0.35); box-shadow: 0 8px 30px rgba(124,58,237,0.1); }
         .faq-question {
-            width: 100%;
-            background: none;
-            border: none;
-            color: #fff;
-            font-weight: 600;
-            font-size: 1rem;
-            padding: 18px 22px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 12px;
-            text-align: left;
-            font-family: 'Inter', sans-serif;
-            transition: var(--transition-fast);
-            letter-spacing: 0.01em;
+            width: 100%; background: none; border: none; color: #fff; font-weight: 600; font-size: 1rem; padding: 18px 22px;
+            cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 12px; text-align: left;
+            font-family: 'Inter', sans-serif; transition: var(--transition-fast); letter-spacing: 0.01em;
         }
-        .faq-question:hover {
-            color: var(--purple-light);
-        }
+        .faq-question:hover { color: var(--purple-light); }
         .faq-arrow {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            background: rgba(124, 58, 237, 0.12);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition-smooth);
-            flex-shrink: 0;
-            font-size: 0.8rem;
-            color: var(--purple-light);
+            width: 32px; height: 32px; border-radius: 50%; background: rgba(124,58,237,0.12);
+            display: flex; align-items: center; justify-content: center; transition: var(--transition-smooth);
+            flex-shrink: 0; font-size: 0.8rem; color: var(--purple-light);
         }
-        .faq-item.open .faq-arrow {
-            transform: rotate(180deg);
-            background: var(--purple);
-            color: #fff;
-        }
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.45s cubic-bezier(0.22, 0.61, 0.36, 1);
-        }
-        .faq-item.open .faq-answer {
-            max-height: 400px;
-        }
-        .faq-answer-inner {
-            padding: 0 22px 20px;
-            color: #94a3b8;
-            font-size: 0.9rem;
-            line-height: 1.7;
-        }
-        .payment-mini-section {
-            padding: 40px 0;
-            background: var(--bg-deep);
-        }
-        .payment-mini-section .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 24px;
-            text-align: center;
-        }
-        .payment-mini-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            justify-content: center;
-            margin-top: 20px;
-        }
+        .faq-item.open .faq-arrow { transform: rotate(180deg); background: var(--purple); color: #fff; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.45s cubic-bezier(0.22,0.61,0.36,1); }
+        .faq-item.open .faq-answer { max-height: 400px; }
+        .faq-answer-inner { padding: 0 22px 20px; color: #94a3b8; font-size: 0.9rem; line-height: 1.7; }
+        .payment-mini-section { padding: 40px 0; background: var(--bg-deep); }
+        .payment-mini-section .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; text-align: center; }
+        .payment-mini-grid { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px; }
         .payment-mini-badge {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--bg-surface);
-            border: 1px solid var(--border-subtle);
-            border-radius: 50px;
-            padding: 10px 20px;
-            color: #e2e8f0;
-            font-weight: 600;
-            font-size: 0.85rem;
+            display: flex; align-items: center; gap: 8px; background: var(--bg-surface); border: 1px solid var(--border-subtle);
+            border-radius: 50px; padding: 10px 20px; color: #e2e8f0; font-weight: 600; font-size: 0.85rem;
         }
-        .pay-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            flex-shrink: 0;
-        }
-        .pay-dot.tropipay {
-            background: #f97316;
-        }
-        .pay-dot.qvapay {
-            background: #6366f1;
-        }
-        .pay-dot.visa {
-            background: #1a1f71;
-        }
-        .pay-dot.bitcoin {
-            background: #f7931a;
-        }
-        .pay-dot.monero {
-            background: #ff6600;
-        }
-        .pay-dot.unionpay {
-            background: #d50032;
-        }
-        .footer-section {
-            background: #05070d;
-            border-top: 1px solid rgba(255, 255, 255, 0.04);
-            padding: 32px 0;
-        }
-        .footer-section .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-        .footer-grid {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 16px;
-        }
-        .footer-brand {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: #fff;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.2rem;
-        }
-        .footer-links a {
-            color: #94a3b8;
-            text-decoration: none;
-            font-size: 0.85rem;
-            transition: var(--transition-fast);
-            margin-left: 20px;
-        }
-        .footer-links a:hover {
-            color: var(--purple-light);
-        }
-        .footer-copy {
-            color: #64748b;
-            font-size: 0.8rem;
-        }
+        .pay-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+        .pay-dot.tropipay { background: #f97316; }
+        .pay-dot.qvapay { background: #6366f1; }
+        .pay-dot.visa { background: #1a1f71; }
+        .pay-dot.bitcoin { background: #f7931a; }
+        .pay-dot.monero { background: #ff6600; }
+        .pay-dot.unionpay { background: #d50032; }
+        .footer-section { background: #05070d; border-top: 1px solid rgba(255,255,255,0.04); padding: 32px 0; }
+        .footer-section .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+        .footer-grid { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+        .footer-brand { display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; font-weight: 700; font-size: 1.2rem; }
+        .footer-links a { color: #94a3b8; text-decoration: none; font-size: 0.85rem; transition: var(--transition-fast); margin-left: 20px; }
+        .footer-links a:hover { color: var(--purple-light); }
+        .footer-copy { color: #64748b; font-size: 0.8rem; }
         @media (max-width: 992px) {
-            .navbar-links {
-                display: none;
-            }
-            .navbar-cta {
-                display: none;
-            }
-            .hamburger-btn {
-                display: flex;
-            }
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-            .section-title {
-                font-size: 2rem;
-            }
+            .navbar-links { display: none; }
+            .navbar-cta { display: none; }
+            .hamburger-btn { display: flex; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .section-title { font-size: 2rem; }
         }
         @media (max-width: 600px) {
-            .contact-form-card {
-                padding: 24px 18px;
-            }
-            .contact-info-card {
-                padding: 24px 18px;
-            }
-            .footer-grid {
-                flex-direction: column;
-                text-align: center;
-            }
-            .footer-links a {
-                margin: 0 10px;
-            }
+            .contact-form-card { padding: 24px 18px; }
+            .contact-info-card { padding: 24px 18px; }
+            .footer-grid { flex-direction: column; text-align: center; }
+            .footer-links a { margin: 0 10px; }
         }
     </style>
 </head>
@@ -753,17 +464,21 @@
                             <a href="#" class="social-btn"><i class="bi bi-github"></i></a>
                         </div>
                     </div>
-                    <div style="margin-top:20px;background:var(--bg-surface);border:1px solid var(--border-subtle);border-radius:var(--radius-xl);padding:24px;">
-                        <h4 style="font-weight:700;margin-bottom:12px;font-size:1rem;"><i class="bi bi-credit-card text-purple-light"></i> Métodos de pago aceptados</h4>
-                        <div style="display:flex;flex-wrap:wrap;gap:10px;">
+                    <div style="margin-top:20px; background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:var(--radius-xl); padding:24px;">
+                        <h4 style="font-weight:700; margin-bottom:16px; font-size:1rem; display:flex; align-items:center; gap:8px;">
+                            <i class="bi bi-credit-card text-purple-light"></i> Métodos de pago aceptados
+                        </h4>
+                        <div style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:12px;">
                             <span class="payment-mini-badge"><span class="pay-dot tropipay"></span> TropiPay</span>
                             <span class="payment-mini-badge"><span class="pay-dot qvapay"></span> QvaPay</span>
-                            <span class="payment-mini-badge"><span class="pay-dot visa"></span> VISA</span>
+                            <span class="payment-mini-badge"><span class="pay-dot visa"></span> Visa</span>
                             <span class="payment-mini-badge"><span class="pay-dot bitcoin"></span> Bitcoin</span>
                             <span class="payment-mini-badge"><span class="pay-dot monero"></span> Monero</span>
                             <span class="payment-mini-badge"><span class="pay-dot unionpay"></span> UnionPay</span>
                         </div>
-                        <p style="color:#94a3b8;font-size:0.8rem;margin-top:10px;">También aceptamos tarjetas soportadas por TropiPay y QvaPay. Los pagos se realizan por hitos según el avance del proyecto.</p>
+                        <p style="color:#cbd5e1; font-size:0.8rem; margin-bottom:6px;"><strong style="color:#f97316;">TropiPay:</strong> Visa, MC, Amex, Discover, UnionPay, Apple/Google Pay, USDC, USDT, PayPal, Zelle, Binance Pay, AirTM, QR, saldo TropiPay, transferencias bancarias, depósitos en efectivo.</p>
+                        <p style="color:#cbd5e1; font-size:0.8rem; margin-bottom:0;"><strong style="color:#6366f1;">QvaPay (+40 métodos):</strong> BTC, USDC, USD, EUR, CUP, PayPal, transferencias, depósitos en efectivo, tarjetas de regalo, USD Cash, CLASICA y más.</p>
+                        <p style="color:#94a3b8; font-size:0.75rem; margin-top:10px;"><i class="bi bi-info-circle"></i> Los pagos se realizan por hitos según el avance del proyecto. Contáctame para más detalles.</p>
                     </div>
                 </div>
                 <div class="contact-form-card">
@@ -835,33 +550,19 @@
             const mobileMenu = document.getElementById('mobileMenu');
             const mobileOverlay = document.getElementById('mobileOverlay');
             const body = document.body;
-
-            function openMenu() { hamburgerBtn.classList.add('open');
-                mobileMenu.classList.add('open');
-                mobileOverlay.classList.add('open');
-                body.style.overflow = 'hidden'; }
-
-            function closeMenu() { hamburgerBtn.classList.remove('open');
-                mobileMenu.classList.remove('open');
-                mobileOverlay.classList.remove('open');
-                body.style.overflow = ''; }
-
+            function openMenu() { hamburgerBtn.classList.add('open'); mobileMenu.classList.add('open'); mobileOverlay.classList.add('open'); body.style.overflow = 'hidden'; }
+            function closeMenu() { hamburgerBtn.classList.remove('open'); mobileMenu.classList.remove('open'); mobileOverlay.classList.remove('open'); body.style.overflow = ''; }
             function toggleMenu() { if (mobileMenu.classList.contains('open')) { closeMenu(); } else { openMenu(); } }
             hamburgerBtn.addEventListener('click', toggleMenu);
             mobileOverlay.addEventListener('click', closeMenu);
-            document.querySelectorAll('#mobileMenu a').forEach(function(link) { link.addEventListener('click', function() {
-                    setTimeout(closeMenu, 150); }); });
+            document.querySelectorAll('#mobileMenu a').forEach(function(link) { link.addEventListener('click', function() { setTimeout(closeMenu, 150); }); });
             let touchStartX = 0;
             mobileMenu.addEventListener('touchstart', function(e) { touchStartX = e.touches[0].clientX; }, { passive: true });
-            mobileMenu.addEventListener('touchend', function(e) { const touchEndX = e.changedTouches[0].clientX; if (
-                    touchEndX - touchStartX > 60) { closeMenu(); } });
+            mobileMenu.addEventListener('touchend', function(e) { const touchEndX = e.changedTouches[0].clientX; if (touchEndX - touchStartX > 60) { closeMenu(); } });
             document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeMenu(); });
             const navbar = document.getElementById('navbar');
             let lastScrollY = 0;
-            window.addEventListener('scroll', function() { const scrollY = window.scrollY; if (scrollY > 100 && scrollY >
-                    lastScrollY) { navbar.style.transform = 'translateY(-100%)'; } else { navbar.style.transform =
-                        'translateY(0)'; }
-                lastScrollY = scrollY; }, { passive: true });
+            window.addEventListener('scroll', function() { const scrollY = window.scrollY; if (scrollY > 100 && scrollY > lastScrollY) { navbar.style.transform = 'translateY(-100%)'; } else { navbar.style.transform = 'translateY(0)'; } lastScrollY = scrollY; }, { passive: true });
             window.toggleFaq = function(btn) {
                 const item = btn.parentElement;
                 const isOpen = item.classList.contains('open');
